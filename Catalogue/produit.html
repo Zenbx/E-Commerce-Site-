@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="TechStorm - Présentation détaillée du produit" />
+    <meta name="author" content="Zenbx" />
+    <title>Casque BT 300 - TechStorm</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="favicon.ico" />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <a href="index.html" class="logo">TechStorm</a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="#">À propos</a></li>
+          <li><a href="index.html">Catalogue</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="buttons">
+        <button class="connexion-button">Se Connecter</button>
+        <button class="pay-button">Acheter</button>
+      </div>
+    </header>
+
+    <!-- CONTENU PRINCIPAL - PRÉSENTATION PRODUIT -->
+    <main class="hero">
+      <section class="product-presentation">
+        <div class="product-container">
+          <!-- Galerie d'images produit -->
+          <div class="product-gallery">
+            <div class="main-image">
+              <img src="icones/moi.png" alt="Casque BT 300" id="mainProductImage" />
+            </div>
+            <div class="thumbnail-gallery">
+              <div class="thumbnail active" onclick="changeImage(this, 'icones/moi.png')">
+                <img src="icones/moi.png" alt="Vue 1" />
+              </div>
+              <div class="thumbnail" onclick="changeImage(this, 'icones/moi.png')">
+                <img src="icones/moi.png" alt="Vue 2" />
+              </div>
+              <div class="thumbnail" onclick="changeImage(this, 'icones/moi.png')">
+                <img src="icones/moi.png" alt="Vue 3" />
+              </div>
+              <div class="thumbnail" onclick="changeImage(this, 'icones/moi.png')">
+                <img src="icones/moi.png" alt="Vue 4" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Informations produit -->
+          <div class="product-info">
+            <h1 class="product-title">Casque BT 300</h1>
+            
+            <div class="product-category">
+              <span class="category-badge">Technologie</span>
+              <span class="category-tag">Casque 2025</span>
+            </div>
+
+            <div class="product-rating">
+              <div class="stars">
+                <span class="star filled">★</span>
+                <span class="star filled">★</span>
+                <span class="star filled">★</span>
+                <span class="star filled">★</span>
+                <span class="star filled">★</span>
+              </div>
+              <span class="rating-score">4.8/5</span>
+              <span class="rating-count">(320 avis)</span>
+            </div>
+
+            <div class="product-price">
+              <span class="current-price">12000 FCFA</span>
+              <span class="old-price">15000 FCFA</span>
+            </div>
+
+            <div class="product-description">
+              <p>Le Casque est hhhhhhhhhhhhhhhhh ggggggggggggggggggg tttttttttttttttttttttttttttttttt ggggggggggggg hhhhhhhhhhhhhhhhh.</p>
+            </div>
+
+            <div class="product-actions">
+              <button class="btn-add-cart">AJOUTER AU PANIER</button>
+              <button class="btn-buy-now">Acheter maintenant</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-top">
+        <div class="footer-left">
+          <h2 class="footer-logo">TechStorm</h2>
+          <p class="footer-slogan">Le futur entre vos mains</p>
+        </div>
+
+        <div class="footer-links-socials">
+          <div class="footer-links">
+            <a href="#">Accueil</a>
+            <a href="#">À propos</a>
+            <a href="#">Catalogue</a>
+            <a href="#">Contact</a>
+          </div>
+          <div class="footer-socials">
+            <a href="#"><img src="icones/facebook.svg" alt="Facebook" /></a>
+            <a href="#"><img src="icones/instagram.svg" alt="Instagram" /></a>
+            <a href="#"><img src="icones/linkedin.svg" alt="LinkedIn" /></a>
+          </div>
+        </div>
+        
+        <div class="footer-newsletter">
+          <p class="newsletter-text">Abonnez-vous à notre newsletter</p>
+          <div class="newsletter-form">
+            <input type="email" placeholder="Votre email" class="newsletter-input" />
+            <button class="newsletter-button">S'abonner</button>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 TechStorm – Tous droits réservés.</p>
+      </div>
+    </footer>
+
+    <!-- Script pour changer l'image principale -->
+    <script>
+      function changeImage(thumbnail, imageSrc) {
+        // Retirer la classe active de toutes les miniatures
+        document.querySelectorAll('.thumbnail').forEach(thumb => {
+          thumb.classList.remove('active');
+        });
+        
+        // Ajouter la classe active à la miniature cliquée
+        thumbnail.classList.add('active');
+        
+        // Changer l'image principale
+        document.getElementById('mainProductImage').src = imageSrc;
+      }
+    </script>
+  </body>
+</html>

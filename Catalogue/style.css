@@ -388,23 +388,11 @@ main { flex: 1; }
   color: #ff9500;
 }
 
-star.partial {
-  position: relative;
-  display: inline-block;
-  font-size: 1.4rem;
-}
-
-.star-empty {
-  color: #333;
-}
-
-.star-filled {
-  position: absolute;
-  left: 0;
-  top: 0;
-  overflow: hidden;
-  width: 80%; 
-  color: #ff9500;
+.star.partial {
+  background: linear-gradient(90deg, #ff9500 80%, #333 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .rating-score {
@@ -457,11 +445,11 @@ star.partial {
 
 .btn-add-cart {
   flex: 1;
-  padding: 16px 32px;
+  padding: 8px 16px;
   border: none;
-  border-radius: 12px;
+  border-radius: 14px;
   color: #fff;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 700;
   cursor: pointer;
   background: linear-gradient(90deg, #00d4ff, #0066FF);

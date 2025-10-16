@@ -138,16 +138,21 @@ body {
   justify-content: space-between;
   flex-direction: column;
   flex-shrink: 1;
-  padding-left: 30px;
+  padding-left: 20px;
   height: 200px;
+  hr{
+    border: none;
+    border-bottom: 2px solid rgb(184, 180, 180);
+    width: 140px;
+  }
 }
 
 .left-side-bar .logout {
   display: flex;
   align-items: center;
-  height: 45px;
+  height: 50px;
   border-top: 3px solid;
-  border-color: white;
+  border-color: rgb(184, 180, 180);
   padding-left: 30px;
 }
 

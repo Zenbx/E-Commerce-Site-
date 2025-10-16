@@ -102,6 +102,13 @@ body {
 
 /* ===== HEADER ===== */
 
+/* ===== MIDDLE ===== */
+
+.client-informations {
+  display: flex;
+  flex-direction: row;
+}
+
 /* ===== SIDEBAR ===== */
 .left-side-bar {
   display: flex;
@@ -112,7 +119,7 @@ body {
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   background-color: #1c1c1e;
-  width: 340px;
+  max-width: 340px;
   height: 674px;
   padding-top: 30px;
 }
@@ -140,11 +147,20 @@ body {
   flex-shrink: 1;
   padding-left: 20px;
   height: 200px;
-  hr{
+  hr {
     border: none;
     border-bottom: 2px solid rgb(184, 180, 180);
     width: 140px;
   }
+}
+
+.info a {
+  display: block;
+  color: #ccc;
+  margin-bottom: 10px;
+  text-decoration: none;
+  font-weight: 400;
+  transition: color 0.3s ease;
 }
 
 .left-side-bar .logout {
@@ -157,6 +173,33 @@ body {
 }
 
 /* ==== SIDEBAR ===== */
+
+/* DETAILS */
+
+.details-personnal-info {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  ul {
+    display: flex;
+    flex-direction: column;;
+    list-style: none;
+  }
+}
+
+/* ATTENTION NOUS RENDONS LES AUTRES DIV INVISIBLES*/
+.details-favoris {
+  display: none;
+}
+.details-orders {
+  display: none;
+}
+.details-parameters {
+  display: none;
+}
+
+/* ==== MIDDLE ==== */
 
 /* ===== FOOTER ===== */
 .footer {

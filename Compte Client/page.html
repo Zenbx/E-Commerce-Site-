@@ -3,7 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="TechStorm - Votre boutique e-commerce futuriste spécialisée dans les technologies innovantes." />
+    <meta
+      name="description"
+      content="TechStorm - Votre boutique e-commerce futuriste spécialisée dans les technologies innovantes."
+    />
     <meta name="author" content="Zenbx" />
     <title>TechStorm - Site de E-commerce</title>
     <link rel="stylesheet" href="style.css" />
@@ -35,73 +38,85 @@
       <div class="left-side-bar">
         <div class="user-picture-name">
           <div class="user-picture">
-            <img src="" alt="photo de profil">
+            <img src="" alt="photo de profil" />
           </div>
-          <div class="username">
-            Isabelle MAGNE
-          </div>
+          <div class="username">Isabelle MAGNE</div>
         </div>
-        
+
         <div class="info">
-          <div class="profile">
-            Informations personelles
-          </div>
-          <hr class="separator">
-          <div class="orders">
-            Mes commandes
-          </div>
-          <hr class="separator">
-          <div class="preferences">
-            Mes favoris
-          </div>
-          <hr class="separator">
-          <div class="Parameters">
-            Paramètres
-          </div>
+          <a class="profile" href="#">Informations personelles</a>
+          <hr class="separator" />
+
+          <a class="orders" href="#">Mes commandes</a>
+          <hr class="separator" />
+
+          <a class="preferences" href="#">Mes favoris</a>
+          <hr class="separator" />
+
+          <a class="Parameters" href="#">Paramètres </a>
         </div>
-        <div class="logout">
-          Déconnexion
-        </div>
+        <div class="logout">Déconnexion</div>
       </div>
-      <div class="details ">
-        
+      <div class="details-personnal-info">
+        <h1>Informations personnelles</h1>
+        <ul class="personnal-info">
+          <li>Nom : Isabelle</li>
+          <li>Prenom : Isabelle</li>
+          <li>Numero de telephone : 123456789</li>
+          <li>Email ; jo@gmail.com</li>
+          <li>Date d'inscription : 12/11/2025</li>
+        </ul>
       </div>
+      <!--attention ces div ne seront pas visibles a cause de CSS-->
+      <div class="details-orders">
+        <h1>Mes commandes</h1>
+      </div>
+      <div class="details-favoris">
+        <h1>Mes Favoris</h1>
+      </div>
+      <div class="details-parameters">
+        <h1>Parametres</h1>
+      </div>
+      <!--ce qui precede est invisible-->
     </main>
 
-   <!-- FOOTER -->
-<footer class="footer">
-<div class = "footer-top">
-  <div class="footer-left">
-    <h2 class="footer-logo">TechStorm</h2>
-    <p class="footer-slogan">Le futur entre vos mains</p>
-  </div>
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-top">
+        <div class="footer-left">
+          <h2 class="footer-logo">TechStorm</h2>
+          <p class="footer-slogan">Le futur entre vos mains</p>
+        </div>
 
-  <div class="footer-links-socials">
-    <div class="footer-links">
-      <a href="#">Accueil</a>
-      <a href="#">À propos</a>
-      <a href="#">Catalogue</a>
-      <a href="#">Contact</a>
-    </div>
-    <div class="footer-socials">
-      <a href="#"><img src="icones/facebook.svg" alt="Facebook" /></a>
-      <a href="#"><img src="icones/instagram.svg" alt="Instagram" /></a>
-      <a href="#"><img src="icones/linkedin.svg" alt="LinkedIn" /></a>
-    </div>
-  </div>
-  
-  <div class="footer-newsletter">
-    <p class="newsletter-text">Abonnez-vous à notre newsletter</p>
-    <div class="newsletter-form">
-      <input type="email" placeholder="Votre email" class="newsletter-input" />
-      <button class="newsletter-button">S’abonner</button>
-    </div>
-  </div>
-</div>
-  <div class="footer-bottom">
-    <p>© 2025 TechStorm – Tous droits réservés.</p>
-  </div>
-</footer>
+        <div class="footer-links-socials">
+          <div class="footer-links">
+            <a href="#">Accueil</a>
+            <a href="#">À propos</a>
+            <a href="#">Catalogue</a>
+            <a href="#">Contact</a>
+          </div>
+          <div class="footer-socials">
+            <a href="#"><img src="icones/facebook.svg" alt="Facebook" /></a>
+            <a href="#"><img src="icones/instagram.svg" alt="Instagram" /></a>
+            <a href="#"><img src="icones/linkedin.svg" alt="LinkedIn" /></a>
+          </div>
+        </div>
 
+        <div class="footer-newsletter">
+          <p class="newsletter-text">Abonnez-vous à notre newsletter</p>
+          <div class="newsletter-form">
+            <input
+              type="email"
+              placeholder="Votre email"
+              class="newsletter-input"
+            />
+            <button class="newsletter-button">S’abonner</button>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 TechStorm – Tous droits réservés.</p>
+      </div>
+    </footer>
   </body>
 </html>

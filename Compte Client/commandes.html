@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description"
+    content="TechStorm - Votre boutique e-commerce futuriste spécialisée dans les technologies innovantes." />
+  <meta name="author" content="Zenbx" />
+  <title>TechStorm - Mes commandes</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.ico" />
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="header">
+    <a href="#" class="logo">TechStorm</a>
+
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#">Accueil</a></li>
+        <li><a href="#">À propos</a></li>
+        <li><a href="#">Catalogue</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="buttons">
+      <button class="connexion-button">Se Connecter</button>
+      <button class="pay-button">Acheter</button>
+    </div>
+  </header>
+
+  <!-- CONTENU PRINCIPAL -->
+  <main class="client-informations">
+    <div class="left-side-bar">
+      <div class="user-picture-name">
+        <div class="user-picture">
+          <img src="" alt="photo de profil" />
+        </div>
+        <div class="username">Isabelle MAGNE</div>
+      </div>
+
+      <div class="info">
+        <a class="profile" href="#">Informations personnelles</a>
+        <hr class="separator" />
+
+        <a class="orders active" href="#">Mes commandes</a>
+        <hr class="separator" />
+
+        <a class="preferences" href="#">Mes favoris</a>
+        <hr class="separator" />
+
+        <a class="Parameters" href="#">Paramètres</a>
+      </div>
+      <div class="logout">Déconnexion</div>
+    </div>
+
+    <!-- SECTION COMMANDES -->
+    <div class="details-orders">
+      <h1>Mes commandes</h1>
+
+      <!-- Barre de recherche et filtre -->
+      <div class="order-search-bar">
+        <input type="text" placeholder="Rechercher une commande..." class="order-search-input" />
+        <select class="order-filter">
+          <option value="all">Toutes</option>
+          <option value="en_cours">En cours</option>
+          <option value="expédiée">Expédiées</option>
+          <option value="livrée">Livrées</option>
+          <option value="annulée">Annulées</option>
+        </select>
+      </div>
+
+      <!-- Liste des commandes -->
+      <div class="orders-list">
+
+        <!-- Commande 1 -->
+        <div class="order-card">
+          <div class="order-header">
+            <h3>Commande #TS-2025-001</h3>
+            <span class="order-status status-en-cours">En cours</span>
+          </div>
+          <p class="order-date">Passée le : 15 octobre 2025</p>
+          <p class="order-total">
+            Montant total : <strong>299,99 €</strong>
+          </p>
+
+          <div class="order-products">
+            <div class="product-item">
+              <img src="produits/casque.jpg" alt="Casque VR TechStorm X" />
+              <div class="product-info">
+                <h4>Casque VR TechStorm X</h4>
+                <p>Quantité : 1</p>
+              </div>
+            </div>
+            <div class="product-item">
+              <img src="produits/gants.jpg" alt="Gants haptiques Pro" />
+              <div class="product-info">
+                <h4>Gants haptiques Pro</h4>
+                <p>Quantité : 1</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="order-actions">
+            <button class="btn-view-details">Voir les détails</button>
+            <button class="btn-track-order">Suivre la commande</button>
+            <button class="btn-download-invoice">
+              Télécharger la facture
+            </button>
+          </div>
+        </div>
+
+        <!-- Commande 2 -->
+        <div class="order-card">
+          <div class="order-header">
+            <h3>Commande #TS-2025-002</h3>
+            <span class="order-status status-livrée">Livrée</span>
+          </div>
+          <p class="order-date">Passée le : 1 octobre 2025</p>
+          <p class="order-total">
+            Montant total : <strong>149,00 €</strong>
+          </p>
+
+          <div class="order-products">
+            <div class="product-item">
+              <img src="produits/drone.jpg" alt="Mini Drone AI Storm" />
+              <div class="product-info">
+                <h4>Mini Drone AI Storm</h4>
+                <p>Quantité : 1</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="order-actions">
+            <button class="btn-view-details">Voir les détails</button>
+            <button class="btn-leave-review">Laisser un avis</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-left">
+        <h2 class="footer-logo">TechStorm</h2>
+        <p class="footer-slogan">Le futur entre vos mains</p>
+      </div>
+
+      <div class="footer-links-socials">
+        <div class="footer-links">
+          <a href="#">Accueil</a>
+          <a href="#">À propos</a>
+          <a href="#">Catalogue</a>
+          <a href="#">Contact</a>
+        </div>
+        <div class="footer-socials">
+          <a href="#"><img src="icones/facebook.svg" alt="Facebook" /></a>
+          <a href="#"><img src="icones/instagram.svg" alt="Instagram" /></a>
+          <a href="#"><img src="icones/linkedin.svg" alt="LinkedIn" /></a>
+        </div>
+      </div>
+
+      <div class="footer-newsletter">
+        <p class="newsletter-text">Abonnez-vous à notre newsletter</p>
+        <div class="newsletter-form">
+          <input type="email" placeholder="Votre email" class="newsletter-input" />
+          <button class="newsletter-button">S’abonner</button>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 TechStorm – Tous droits réservés.</p>
+    </div>
+  </footer>
+</body>
+
+</html>

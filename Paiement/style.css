@@ -131,8 +131,9 @@ body {
 .info > div {
   flex: 1 1 250px;
   max-width: 300px;
-  background:black;
+  background:#0a0a0b;
   border-radius: 15px;
+  border: 5px solid rgba(0, 102, 255, 0.6);
   box-shadow: 0 0 10px rgba(0, 102, 255, 0.6), 0 0 20px rgba(138, 43, 226, 0.6);
   padding: 25px;
   display: flex;
@@ -144,7 +145,7 @@ body {
 
 .info > div:hover {
   transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 10px rgba(0, 102, 255, 0.6), 0 0 20px rgba(138, 43, 226, 0.6);
 }
 
 /* Titres et textes */
@@ -155,9 +156,17 @@ body {
   margin-bottom: 10px;
 }
 
-.info p {
+.stitre1, .stitre2, .stitre3, .stitre4{
   text-align: center;
   color:white;
+  margin-bottom: 15px;
+}
+
+
+.year1, .year2, .year3, .year4, .month1, .month2, .month3, .month4{
+  text-align: center;
+  color: rgba(0, 102, 255, 0.6);
+  font-weight: 500;
   margin-bottom: 15px;
 }
 

@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: serif;
+}
+
+/* Container principal */
+
+body {
+    /*background: #000000;
+    background: linear-gradient(90deg, #020024, rgba(12, 61, 87, 1) 76%, #020024 100%);*/
+    /*background: #020024;
+    background: radial-gradient(circle, rgba(2, 0, 36, 1) 0%, rgba(12, 61, 87, 1) 11%, rgba(2, 0, 36, 1) 100%);*/
+    background: radial-gradient(circle at 85% 20%, rgba(0, 255, 255, 1) 0%, rgba(0, 255, 255, 1) 0%, rgba(2, 0, 36, 1) 20%),
+                radial-gradient(circle at 70% 70%, rgba(0, 255, 255, 1) 0%, rgba(0, 255, 255, 1) 0%, rgba(2, 0, 36, 1) 30%);
+    background-blend-mode: soft-light; /* ou 'lighten' / 'overlay' selon le rendu voulu */
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    gap: 30rem;
+    align-items: center;
+    justify-content: center;
+    padding: 4% 6% 4% 7%;
+}
+
+.Author{
+    color: White;
+    font-size: 50px;
+}
+ .login-card {
+    background: #020024;
+     display: flex;
+     flex-direction: column;
+     text-align: center;
+     align-items: center;
+     justify-content: center;
+     margin-right: 0px;
+     padding: 4%;
+     border-radius: 20px;
+     border: 2px solid #00ffff; /* couleur de la bordure */
+     box-shadow: 0 0 10px #00ffff; /* effet lumineux */
+}
+ #connexion{
+     background: linear-gradient(90deg, #00D4FF, #AE00FF); /* ton dégradé */
+     -webkit-background-clip: text;   /* applique le dégradé au texte */
+     -webkit-text-fill-color: transparent; /* rend le texte transparent */
+     margin-bottom: 20px;
+ }
+
+  #google-btn{
+     width: 100%;
+     background: #121024;
+     color: white;
+     padding: 4px 8px 4px 8px;
+     border-radius: 10px;
+     text-align: center;
+     display: inline-flex;
+     align-items: center;       /* centre verticalement l’icône et le texte */
+     justify-content: center;   /* centre horizontalement le contenu dans le bouton */
+     gap: 10px;
+     border: 2px solid #00ffff; /* couleur de la bordure */
+ }
+  #google-btn:hover{
+      box-shadow: 0 0 10px #00ffff;
+  }
+ .login-card #google-btn img{
+     min-width: 10px;
+     max-width: 20px;
+     max-height: 20px;
+     position: relative;
+     top:50%;
+ }
+
+  #ou{
+     display: inline-flex;
+     align-items: center;
+     justify-content: center;
+     gap: 10px;
+     color: white;
+     margin-top: 3%;
+ }
+
+  .line{
+      width: 110px;      /* largeur de la ligne */
+      background-color: white; /* couleur de la ligne */
+  }
+
+.form {
+    display:block;
+    flex-direction: column;
+    width: 100%;
+}
+.form input{
+    width: 100%;
+    background: #121024;
+    color: white;
+    padding: 8px 12px;
+    margin-top: 10%;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 2px solid #00ffff;
+}
+.form input::placeholder{
+    color: white;
+}
+.form input:hover{
+    box-shadow: 0 0 10px #00ffff;
+}
+
+#forgot{
+    color: #00ffff;
+}
+#forgot:hover{
+    box-shadow: 0 0 10px #00ffff;
+}
+#forgotDiv{
+    margin-top: 3%;
+}
+
+#login-btn{
+    width: 100%;
+    margin-top: 5%;
+    margin-bottom: 3%;
+    padding: 8px 12px;
+    background: #00D4FF;
+    background: linear-gradient(90deg, rgba(0, 212, 255, 1) 0%, rgba(174, 0, 255, 1) 100%);
+    border-radius: 10px;
+    border: none;
+    color: white;
+}
+#login-btn:hover{
+    box-shadow: 0 0 10px #00ffff;
+}
+#PasDeCompte{
+    color: white;
+    font-size: 14px;
+}
+
+#CreerCompte{
+    color: #00D4FF;
+    font-size: 14px;
+}
+#CreerCompte:hover{
+    box-shadow: 0 0 10px #00ffff;
+}

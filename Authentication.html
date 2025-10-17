@@ -8,30 +8,23 @@
    
 </head>
 <body>
-    <div class="glow"></div>
-    <div class="Login container">
-         <div class="brand">TechStorm</div>
-         <div class="login-card">
-        
-            <h1>Connexion</h1>
-            <button class="google-btn">
-                 <img src="https://www.svgrepo.com/show/355037/google.svg" alt="Google" />
-                Se connecter avec Google</button>
-              <div class="separator"><span>OU</span></div>
-              
-
-    <form>
-      <input type="email" placeholder="E-mail" required />
-      <input type="password" placeholder="Mot de passe" required />
-      <a href="#" class="forgot">Mot de passe oublié ?</a>
-      <button type="submit" class="login-btn">SE CONNECTER</button>
-    </form>
-
+    <div class="Author">TechStorm</div>
+    <div class="login-card">
+        <h1 id ="connexion">Connexion</h1>
+        <button id="google-btn">
+            <div><img src="https://www.svgrepo.com/show/355037/google.svg" alt="Google" /></div>
+            <div>Se connecter avec Google</div>
+        </button>
+        <div id="ou"> <div><hr class="line"></div> <div>OU</div> <div><hr class="line"></div> </div>
+        <div class="form">
+            <div><input type="email" placeholder="E-mail" required /></div>
+            <div><input type="password" placeholder="Mot de passe" required/></div>
+            <div  id="forgotDiv"><a href="#" id="forgot">Mot de passe oublié?</a></div>
+            <button type="submit" id="login-btn">SE CONNECTER</button>
+        </div>
     <p class="register">
-      Pas encore de compte ? <a href="Inscription.html">Créer un compte</a>.
+        <span id="PasDeCompte">Pas encore de compte?</span> <a href="Inscription.html" id="CreerCompte">Créer un compte</a>.
     </p>
   </div>
-    </div>
-    
 </body>
 </html>

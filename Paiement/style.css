@@ -111,10 +111,10 @@ body {
 /* SECTION DES PLANS PREMIUM */
 .prix {
   display: flex;
-  justify-content: center;       /* centre les boxes horizontalement */
-  align-items: stretch;          /* égalise la hauteur des boxes */
-  flex-wrap: wrap;               /* permet le retour à la ligne sur petits écrans */
-  gap: 30px;                     /* espace entre les boxes */
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 30px;
   padding: 50px 20px;
   background-color: #f8f8f8;
 }
@@ -127,17 +127,17 @@ body {
   gap: 30px;
 }
 
-/* BOX STYLE GÉNÉRAL — au lieu de box1, box2, etc. */
+
 .info > div {
-  flex: 1 1 250px;               /* largeur flexible mais minimum 250px */
-  max-width: 300px;              /* limite la largeur */
-  background: rgb(180, 180, 241);
+  flex: 1 1 250px;
+  max-width: 300px;
+  background:black;
   border-radius: 15px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0, 102, 255, 0.6), 0 0 20px rgba(138, 43, 226, 0.6);
   padding: 25px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* espace le contenu */
+  justify-content: space-between; 
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -151,13 +151,13 @@ body {
 .info h3 {
   font-size: 1.3rem;
   text-align: center;
-  color: #333;
+  color:white;
   margin-bottom: 10px;
 }
 
 .info p {
   text-align: center;
-  color: #555;
+  color:white;
   margin-bottom: 15px;
 }
 
@@ -170,7 +170,7 @@ body {
 
 .info ul li {
   margin: 8px 0;
-  color: #444;
+  color:white;
   text-align: left;
 }
 

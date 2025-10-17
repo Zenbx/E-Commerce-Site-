@@ -108,6 +108,104 @@ body {
 
 
 (coder ici...)
+/* SECTION DES PLANS PREMIUM */
+.prix {
+  display: flex;
+  justify-content: center;       /* centre les boxes horizontalement */
+  align-items: stretch;          /* égalise la hauteur des boxes */
+  flex-wrap: wrap;               /* permet le retour à la ligne sur petits écrans */
+  gap: 30px;                     /* espace entre les boxes */
+  padding: 50px 20px;
+  background-color: #f8f8f8;
+}
+
+.info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 30px;
+}
+
+/* BOX STYLE GÉNÉRAL — au lieu de box1, box2, etc. */
+.info > div {
+  flex: 1 1 250px;               /* largeur flexible mais minimum 250px */
+  max-width: 300px;              /* limite la largeur */
+  background: rgb(180, 180, 241);
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* espace le contenu */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.info > div:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Titres et textes */
+.info h3 {
+  font-size: 1.3rem;
+  text-align: center;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.info p {
+  text-align: center;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+/* Liste */
+.info ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.info ul li {
+  margin: 8px 0;
+  color: #444;
+  text-align: left;
+}
+
+/* Bouton */
+.info button {
+  align-self: center;
+  background: linear-gradient(90deg, #0066FF, #8A2BE2);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.info button:hover {
+  background: linear-gradient(90deg, #f107a3, #7b2ff7);
+}
+
+/* TITRE PRINCIPAL */
+.version {
+  text-align: center;
+  margin-top: 75px;
+  color: #0066FF;
+  font-size: 3rem;
+}
+
+.intro{
+  text-align: center;
+  margin: 20px 15%;
+  color: #ccc;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
 
 
 

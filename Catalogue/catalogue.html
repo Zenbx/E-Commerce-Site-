@@ -5,219 +5,149 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="TechStorm - Votre boutique e-commerce futuriste spécialisée dans les technologies innovantes." />
     <meta name="author" content="Zenbx" />
-    <title>TechStorm - Site de E-commerce</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>TechStorm - Catalogue</title>
+    <link rel="stylesheet" href="catalogue.css" />
+    <link rel="stylesheet" href="header-footer.css" />
+    <link rel="stylesheet" href="produit.css" />
     <link rel="icon" href="favicon.ico" />
   </head>
 
   <body>
-    <!-- HEADER -->
+    
     <header class="header">
       <a href="#" class="logo">TechStorm</a>
 
       <nav>
         <ul class="nav-links">
-          <li><a href="#">Accueil</a></li>
-          <li><a href="#">À propos</a></li>
-          <li><a href="#">Catalogue</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="../Accueil/accueil.html">Accueil</a></li>
+          <li><a href="../A propos/a_propos.html">À propos</a></li>
+          <li><a href="../Accueil/accueil.html">Catalogue</a></li>
+          <li><a href="../Contact/page.html">Contact</a></li>
         </ul>
       </nav>
 
       <div class="buttons">
         <button class="connexion-button">Se Connecter</button>
-        <button class="pay-button">Acheter</button>
+        <button class="pay-button">Acheter <span id="cart-count" aria-live="polite" class="cart-count">0</span></button>
       </div>
     </header>
 
-    <!-- CONTENU PRINCIPAL -->
+    <!-- CONTENU CATALOGUE AMÉLIORÉ -->
     <main class="hero">
-      <section class="catalogue">
+      <section class="catalogue" aria-label="Catalogue de produits">
         <!-- Barre latérale filtres -->
-        <aside class="filters">
-          <h3>Filtres</h3>
-          <ul class="filter-list">
-            <li><label><input type="checkbox" /> <span>Smartphones</span></label></li>
-            <li><label><input type="checkbox" /> <span>Laptops</span></label></li>
-            <li><label><input type="checkbox" /> <span>Montres</span></label></li>
-            <li><label><input type="checkbox" /> <span>Écouteurs</span></label></li>
-          </ul>
+        <aside class="filters" aria-labelledby="filters-title">
+          <h3 id="filters-title">Filtres</h3>
+
+          <div class="filter-group">
+            <label for="search" class="visually-hidden">Rechercher</label>
+            <input id="search" type="search" placeholder="Rechercher un produit, ex: Airpods" />
+          </div>
+
+          <div class="filter-group">
+            <h4>Catégories</h4>
+            <ul class="filter-list" id="category-filters">
+              <li><label><input type="checkbox" value="Smartphones" /> <span>Smartphones</span></label></li>
+              <li><label><input type="checkbox" value="Laptops" /> <span>Laptops</span></label></li>
+              <li><label><input type="checkbox" value="Montres" /> <span>Montres</span></label></li>
+              <li><label><input type="checkbox" value="Écouteurs" /> <span>Écouteurs</span></label></li>
+              <li><label><input type="checkbox" value="Accessoires" /> <span>Accessoires</span></label></li>
+            </ul>
+          </div>
+
+          <div class="filter-group">
+            <h4>Prix</h4>
+            <div class="price-range">
+              <input type="range" id="price-range" min="0" max="300000" step="1000" value="300000" />
+              <div class="price-value">Max : <span id="price-max">300&nbsp;000</span> FCFA</div>
+            </div>
+          </div>
+
+          <div class="filter-actions">
+            <button id="reset-filters" class="btn-small">Réinitialiser</button>
+            <button id="apply-filters" class="btn-small primary">Appliquer</button>
+          </div>
         </aside>
 
         <!-- Zone produits -->
         <div class="catalogue-body">
           <header class="catalogue-header">
-            <h1>Tous Nos Produits</h1>
-            <div class="sort">Trié par</div>
+            <div>
+              <h1 id="catalog-title">Tous Nos Produits</h1>
+              <p class="muted" id="product-count">Affichage de <span id="shown-count">0</span> produits</p>
+            </div>
+
+            <div class="controls">
+              <label for="sort" class="visually-hidden">Trier</label>
+              <select id="sort" aria-label="Trier les produits">
+                <option value="featured">Trier par : Pertinence</option>
+                <option value="price-asc">Prix : faible → élevé</option>
+                <option value="price-desc">Prix : élevé → faible</option>
+                <option value="new">Nouveautés</option>
+              </select>
+            </div>
           </header>
 
-          <div class="cards">
-            <!-- Carte produit (duplique autant que nécessaire) -->
-            <article class="card">
-              <div class="card-thumb">
-                <img src="icones/moi.png" alt="Airpods Pro" />
-              </div>
-              <div class="card-body">
-                <h4>Airpods Pro</h4>
-                <div class="meta">
-                  <div class="qty"><span>2</span></div>
-                  <div class="price"><span>25&nbsp;000</span><small>FCFA</small></div>
-                </div>
-                <button class="btn-add">Ajouter au panier</button>
-              </div>
-            </article>
+          <div class="cards" id="cards" aria-live="polite" aria-busy="false">
+            <!-- Les cartes vont être insérées dynamiquement via JS -->
+          </div>
 
-            <!-- copies -->
-            <article class="card">
-              <div class="card-thumb">
-                <img src="icones/moi.png" alt="Airpods Pro" />
-              </div>
-              <div class="card-body">
-                <h4>Airpods Pro</h4>
-                <div class="meta">
-                  <div class="qty"><span>2</span></div>
-                  <div class="price"><span>25&nbsp;000</span><small>FCFA</small></div>
-                </div>
-                <button class="btn-add">Ajouter au panier</button>
-              </div>
-            </article>
-
-            <article class="card">
-              <div class="card-thumb">
-                <img src="icones/moi.png" alt="Airpods Pro" />
-              </div>
-              <div class="card-body">
-                <h4>Airpods Pro</h4>
-                <div class="meta">
-                  <div class="qty"><span>2</span></div>
-                  <div class="price"><span>25&nbsp;000</span><small>FCFA</small></div>
-                </div>
-                <button class="btn-add">Ajouter au panier</button>
-              </div>
-            </article>
-
-            <article class="card">
-              <div class="card-thumb">
-                <img src="icones/moi.png" alt="Airpods Pro" />
-              </div>
-              <div class="card-body">
-                <h4>Airpods Pro</h4>
-                <div class="meta">
-                  <div class="qty"><span>2</span></div>
-                  <div class="price"><span>25&nbsp;000</span><small>FCFA</small></div>
-                </div>
-                <button class="btn-add">Ajouter au panier</button>
-              </div>
-            </article>
-
-            <article class="card">
-              <div class="card-thumb">
-                <img src="icones/moi.png" alt="Airpods Pro" />
-              </div>
-              <div class="card-body">
-                <h4>Airpods Pro</h4>
-                <div class="meta">
-                  <div class="qty"><span>2</span></div>
-                  <div class="price"><span>25&nbsp;000</span><small>FCFA</small></div>
-                </div>
-                <button class="btn-add">Ajouter au panier</button>
-              </div>
-            </article>
-
-            <article class="card">
-              <div class="card-thumb">
-                <img src="icones/moi.png" alt="Airpods Pro" />
-              </div>
-              <div class="card-body">
-                <h4>Airpods Pro</h4>
-                <div class="meta">
-                  <div class="qty"><span>2</span></div>
-                  <div class="price"><span>25&nbsp;000</span><small>FCFA</small></div>
-                </div>
-                <button class="btn-add">Ajouter au panier</button>
-              </div>
-            </article>
-
-            <article class="card">
-              <div class="card-thumb">
-                <img src="icones/moi.png" alt="Airpods Pro" />
-              </div>
-              <div class="card-body">
-                <h4>Airpods Pro</h4>
-                <div class="meta">
-                  <div class="qty"><span>2</span></div>
-                  <div class="price"><span>25&nbsp;000</span><small>FCFA</small></div>
-                </div>
-                <button class="btn-add">Ajouter au panier</button>
-              </div>
-            </article>
-
-            <article class="card">
-              <div class="card-thumb">
-                <img src="icones/moi.png" alt="Airpods Pro" />
-              </div>
-              <div class="card-body">
-                <h4>Airpods Pro</h4>
-                <div class="meta">
-                  <div class="qty"><span>2</span></div>
-                  <div class="price"><span>25&nbsp;000</span><small>FCFA</small></div>
-                </div>
-                <button class="btn-add">Ajouter au panier</button>
-              </div>
-            </article>
-
-            <article class="card">
-              <div class="card-thumb">
-                <img src="icones/moi.png" alt="Airpods Pro" />
-              </div>
-              <div class="card-body">
-                <h4>Airpods Pro</h4>
-                <div class="meta">
-                  <div class="qty"><span>2</span></div>
-                  <div class="price"><span>25&nbsp;000</span><small>FCFA</small></div>
-                </div>
-                <button class="btn-add">Ajouter au panier</button>
-              </div>
-            </article>
+          <!-- Pagination -->
+          <div class="pagination" id="pagination" role="navigation" aria-label="Pagination des produits">
+            <button id="prev-page" class="btn-small" aria-label="Page précédente">‹</button>
+            <div id="pages" class="pages"></div>
+            <button id="next-page" class="btn-small" aria-label="Page suivante">›</button>
           </div>
         </div>
       </section>
     </main>
 
-   <!-- FOOTER -->
-<footer class="footer">
-<div class = "footer-top">
-  <div class="footer-left">
-    <h2 class="footer-logo">TechStorm</h2>
-    <p class="footer-slogan">Le futur entre vos mains</p>
-  </div>
+    <!-- FOOTER (INCHANGÉ) -->
+    <footer class="footer">
+      <div class = "footer-top">
+        <div class="footer-left">
+          <h2 class="footer-logo">TechStorm</h2>
+          <p class="footer-slogan">Le futur entre vos mains</p>
+        </div>
 
-  <div class="footer-links-socials">
-    <div class="footer-links">
-      <a href="#">Accueil</a>
-      <a href="#">À propos</a>
-      <a href="#">Catalogue</a>
-      <a href="#">Contact</a>
-    </div>
-    <div class="footer-socials">
-      <a href="#"><img src="icones/facebook.svg" alt="Facebook" /></a>
-      <a href="#"><img src="icones/instagram.svg" alt="Instagram" /></a>
-      <a href="#"><img src="icones/linkedin.svg" alt="LinkedIn" /></a>
-    </div>
-  </div>
-  
-  <div class="footer-newsletter">
-    <p class="newsletter-text">Abonnez-vous à notre newsletter</p>
-    <div class="newsletter-form">
-      <input type="email" placeholder="Votre email" class="newsletter-input" />
-      <button class="newsletter-button">S’abonner</button>
-    </div>
-  </div>
-</div>
-  <div class="footer-bottom">
-    <p>© 2025 TechStorm – Tous droits réservés.</p>
-  </div>
-</footer>
+        <div class="footer-links-socials">
+          <div class="footer-links">
+            <a href="#">Accueil</a>
+            <a href="#">À propos</a>
+            <a href="#">Catalogue</a>
+            <a href="#">Contact</a>
+          </div>
+          <div class="footer-socials">
+            <a href="#"><img src="icones/facebook.svg" alt="Facebook" /></a>
+            <a href="#"><img src="icones/instagram.svg" alt="Instagram" /></a>
+            <a href="#"><img src="icones/linkedin.svg" alt="LinkedIn" /></a>
+          </div>
+        </div>
+        
+        <div class="footer-newsletter">
+          <p class="newsletter-text">Abonnez-vous à notre newsletter</p>
+          <div class="newsletter-form">
+            <input type="email" placeholder="Votre email" class="newsletter-input" />
+            <button class="newsletter-button">S’abonner</button>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 TechStorm – Tous droits réservés.</p>
+      </div>
+    </footer>
 
+    <!-- Quick view modal (simple) -->
+    <div id="quickview" class="modal" aria-hidden="true" role="dialog" aria-modal="true">
+      <div class="modal-content" role="document">
+        <button class="modal-close" aria-label="Fermer la fenêtre">✕</button>
+        <div class="modal-body" id="quickview-body">
+          <!-- contenu dynamique -->
+        </div>
+      </div>
+    </div>
+
+    <!-- SCRIPT: données + fonctionnalité catalogue -->
+    <script src="catalogue.js" ></script>
   </body>
 </html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="TechStorm - Votre boutique e-commerce futuriste spécialisée dans les technologies innovantes."
+    />
+    <meta name="author" content="Zenbx" />
+    <title>TechStorm - Site de E-commerce</title>
+    <link rel="stylesheet" href="header-footer-pmt.css" />
+    <link rel="icon" href="favicon.ico" />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <a href="#" class="logo">TechStorm</a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#">Accueil</a></li>
+          <li><a href="#">À propos</a></li>
+          <li><a href="#">Catalogue</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="buttons">
+        <button class="connexion-button">Se Connecter</button>
+        <button class="pay-button">Acheter</button>
+      </div>
+    </header>
+
+    <!-- CONTENU PRINCIPAL -->
+    <main class="prinipal-area">
+      <div class="payment-area">
+        <h2 class="titre"><strong>Enregistrer votre carte</strong></h2>
+        <div class="numbers-area">
+          <img src="icones/card.svg" alt="" class="card"/>
+          <textarea
+            name="credit-card-number"
+            class="credit-card-number"
+            placeholder="XXXX XXXX XXXX XXXX"
+          ></textarea>
+          <button class="help">?</button>
+        </div>
+        <div class="owner-name">
+          <textarea
+            name="owner-cc-name"
+            class="owner-cc-name"
+            placeholder="Nom du titulaire"
+          ></textarea>
+        </div>
+        <div class="date-cvc">
+          <div class="date">
+            <textarea
+              name="date"
+              class="date-txt-area"
+              placeholder="MM/AA"
+            ></textarea>
+          </div>
+          <div class="CVC">
+            <textarea
+              name="CVC"
+              class="CVC-txt-area"
+              placeholder="CVC"
+            ></textarea>
+            <button class="help-cvc">?</button>
+          </div>
+        </div>
+        <div class="save">
+          <button class="btn-save">Enregistrer la carte</button>
+        </div>
+        <div class="separator">
+          <hr class="lign1">
+          OR 
+          <hr class="lign2">
+        </div>
+        <div class="others-methods">
+          <img src="icones/paypal.svg" alt="paypal">
+          <img src="icones/visa.svg" alt="visa">
+          <img src="icones/mater.svg" alt="master-card">
+        </div>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-top">
+        <div class="footer-left">
+          <h2 class="footer-logo">TechStorm</h2>
+          <p class="footer-slogan">Le futur entre vos mains</p>
+        </div>
+
+        <div class="footer-links-socials">
+          <div class="footer-links">
+            <a href="#">Accueil</a>
+            <a href="#">À propos</a>
+            <a href="#">Catalogue</a>
+            <a href="#">Contact</a>
+          </div>
+          <div class="footer-socials">
+            <a href="#"><img src="icones/facebook.svg" alt="Facebook" /></a>
+            <a href="#"><img src="icones/instagram.svg" alt="Instagram" /></a>
+            <a href="#"><img src="icones/linkedin.svg" alt="LinkedIn" /></a>
+          </div>
+        </div>
+
+        <div class="footer-newsletter">
+          <p class="newsletter-text">Abonnez-vous à notre newsletter</p>
+          <div class="newsletter-form">
+            <input
+              type="email"
+              placeholder="Votre email"
+              class="newsletter-input"
+            />
+            <button class="newsletter-button">S’abonner</button>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 TechStorm – Tous droits réservés.</p>
+      </div>
+    </footer>
+  </body>
+</html>

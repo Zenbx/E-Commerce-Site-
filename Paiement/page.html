@@ -9,7 +9,7 @@
     />
     <meta name="author" content="Zenbx" />
     <title>TechStorm - Site de E-commerce</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="header-footer-pmt.css" />
     <link rel="icon" href="favicon.ico" />
   </head>
 
@@ -36,9 +36,51 @@
     <!-- CONTENU PRINCIPAL -->
     <main class="prinipal-area">
       <div class="payment-area">
-        <h1 class="titre">Enregistrer votre carte</h1>
+        <h2 class="titre"><strong>Enregistrer votre carte</strong></h2>
         <div class="numbers-area">
-          <img src="" alt="" />
+          <img src="icones/card.svg" alt="" class="card"/>
+          <textarea
+            name="credit-card-number"
+            class="credit-card-number"
+            placeholder="XXXX XXXX XXXX XXXX"
+          ></textarea>
+          <button class="help">?</button>
+        </div>
+        <div class="owner-name">
+          <textarea
+            name="owner-cc-name"
+            class="owner-cc-name"
+            placeholder="Nom du titulaire"
+          ></textarea>
+        </div>
+        <div class="date-cvc">
+          <div class="date">
+            <textarea
+              name="date"
+              class="date-txt-area"
+              placeholder="MM/AA"
+            ></textarea>
+          </div>
+          <div class="CVC">
+            <textarea
+              name="CVC"
+              class="CVC-txt-area"
+              placeholder="CVC"
+            ></textarea>
+            <button class="help-cvc">?</button>
+          </div>
+        </div>
+        <div class="save">
+          <button class="btn-save">Enregistrer la carte</button>
+        </div>
+        <div class="separator">
+          <hr class="lign1">
+          OR 
+          <hr class="lign2">
+        </div>
+        <div class="others-method">
+          <img src="icones/paypal" alt="paypal">
+          <img src="icones/" alt="">
         </div>
       </div>
     </main>

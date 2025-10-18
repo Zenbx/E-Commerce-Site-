@@ -136,7 +136,7 @@
   width: 700px;
   height: auto;
   position: absolute;
-  top: 50%;
+  top: 40%;
   right: 400px;
   z-index: 0;
   filter: drop-shadow(-20px -20px 60px rgba(0, 230, 230, 0.5));

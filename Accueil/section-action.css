@@ -3,7 +3,7 @@
 /* ------------------------- */
 .cta-section {
   background: #0a1520;
-  padding: 100px 0;
+  padding: 100px 0 50px;
   position: relative;
   overflow: hidden;
 }
@@ -126,17 +126,19 @@
 
 .cta-features {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 40px;
-  margin-top: 80px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 50px;
+  margin-top: 150px;
 }
 
 .cta-feature {
   text-align: center;
+  animation: float-rotate 3s ease-in-out infinite;
 }
 
-.cta-feature-icon {
-  font-size: 3rem;
+.cta-feature-icon img{
+  width: 3rem;
+  height: auto;
   margin-bottom: 15px;
 }
 
@@ -149,4 +151,16 @@
 .cta-feature p {
   color: #94a3b8;
   font-size: 0.95rem;
+}
+
+@keyframes float-rotate {
+  0% {
+    transform: translateY(-40%) translateY(-20px) rotate(2deg);
+  }
+  50% {
+    transform: translateY(-40%) translateY(0px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-40%) translateY(-20px) rotate(2deg);
+  }
 }

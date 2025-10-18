@@ -5,69 +5,317 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="TechStorm - Votre boutique e-commerce futuriste spécialisée dans les technologies innovantes." />
     <meta name="author" content="Zenbx" />
-    <title>TechStorm - Site de E-commerce</title>
+    <title>TechStorm - Site de - mon Panier</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="favicon.ico" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
   </head>
 
   <body>
-    <!-- HEADER -->
-    <header class="header">
-      <a href="#" class="logo">TechStorm</a>
-
-      <nav>
-        <ul class="nav-links">
-          <li><a href="#">Accueil</a></li>
-          <li><a href="#">À propos</a></li>
-          <li><a href="#">Catalogue</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
-
-      <div class="buttons">
-        <button class="connexion-button">Se Connecter</button>
-        <button class="pay-button">Acheter</button>
+  <!-- HEADER -->
+  <header class="header">
+  <a href="#" class="logo">Panier</a>
+  <span class="compteur">(3)</span>
+  <div class="buttons">
+  <label class="location" for="locationDialog">
+  <i class="fas fa-location-dot"></i>
+  <input type="checkbox" id="locationDialog">
+    <div class="dialog-overlay">
+      <div class="dialog location-dialog">
+        <label for="locationDialog" class="dialog-close">x</label>
+        <h3 class="dialog-title">Où souhaiteriez vous vous faire livrer?</h3>
+        <div class="dialog-section">
+          <label>Pays</label>
+          <select class="location-select">
+            <option value="">selectionnez un Pays</option>
+            <option value="cameroun"> Cameroun</option>
+            <option value="France">France</option>
+            <option value="senegal">Senegal</option>
+            <option value="cote-ivoire">Côte d'ivoire</option>
+            <option value="gabon">Gabon</option>
+            <option value="buurkina">Burkina Faso</option>
+            <option value="mali">Mali</option>
+            <option value="benin">Bénin</option>
+            <option value="togo">Togo</option>
+          </select>
+        </div>
+        <div class="dialog-section">
+          <label> ville </label>
+        <select class="location-select">
+          <option value="">Sélectionnez une ville</option>
+          <option value="yaounde">Yaoundé</option>
+          <option value="douala">Douala</option>
+          <option value="paris">Paris</option>
+          <option value="dakar">Dakar</option>
+          <option value="abidjan">Abidjan</option>
+          <option value="libreville">Libre-ville</option>
+          <option value="ouagadougou">Ouagadougou</option>
+          <option value="bamako">Bamako</option>
+          <option value="cotonou">Cotonou</option>
+          <option value="lome">Lomé</option>
+        </select>
+        </div>
+        <div class="dialog-actions">
+          <label for="locationDialog" class="dialog-btn cancel">Annuler</label>
+          <label for="locationDialog" class="dialog-btn confirm">Confirmer</label>
+        </div>
       </div>
-    </header>
-
-    <!-- CONTENU PRINCIPAL -->
-    <main class="hero">
-    </main>
-
-   <!-- FOOTER -->
-<footer class="footer">
-<div class = "footer-top">
-  <div class="footer-left">
-    <h2 class="footer-logo">TechStorm</h2>
-    <p class="footer-slogan">Le futur entre vos mains</p>
+    </div>
+  </label>
+  <button class="favorite">
+  <i class="fas fa-heart"></i>
+  </button>
+  <a href="#catalogue" class="Catalogue">
+  <i class="fas fa-arrow-left"></i> Catalogue
+  </a>
   </div>
-
-  <div class="footer-links-socials">
-    <div class="footer-links">
-      <a href="#">Accueil</a>
-      <a href="#">À propos</a>
-      <a href="#">Catalogue</a>
-      <a href="#">Contact</a>
-    </div>
-    <div class="footer-socials">
-      <a href="#"><img src="icones/facebook.svg" alt="Facebook" /></a>
-      <a href="#"><img src="icones/instagram.svg" alt="Instagram" /></a>
-      <a href="#"><img src="icones/linkedin.svg" alt="LinkedIn" /></a>
-    </div>
+  </header>
+  
+  <!-- CONTENU PRINCIPAL -->
+  <main class="hero">
+  <section class="article-panier">
+  <div class="panier-header">
+  <input type="checkbox" id="selectAll">
+  <span>Tout sélectionner</span>
   </div>
   
+  <!-- Article 1 -->
+  <div class="article">
+  <input type="checkbox" class="article-checkbox">
+  <img src="https://images.unsplash.com/photo-1609081219090-a6d81d3085bf?ixlib=rb-4.1.0&auto=format&fit=crop&q=60&w=500" alt="AirPods Pro" />
+  <div class="article-info">
+  <div class="article-name">
+  <label for="dialog1" style="cursor: pointer; color: inherit;">AirPods Pro 2ème Génération</label>
+  <input type="checkbox" id="dialog1">
+  <div class="dialog-overlay">
+  <div class="dialog">
+  <label for="dialog1" class="dialog-close">×</label>
+  <h3 class="dialog-title">AirPods Pro 2ème Génération</h3>
+  <div class="dialog-section">
+  <label>Couleur</label>
+  <div class="color-options">
+  <label class="color-option">
+  <input type="radio" name="color1" checked>
+  <div class="color-box" style="background-color: #ffffff; border: 1px solid #ccc;"></div>
+  </label>
+  <label class="color-option">
+  <input type="radio" name="color1">
+  <div class="color-box" style="background-color: #000000;"></div>
+  </label>
+  <label class="color-option">
+  <input type="radio" name="color1">
+  <div class="color-box" style="background-color: #ff4444;"></div>
+  </label>
+  <label class="color-option">
+  <input type="radio" name="color1">
+  <div class="color-box" style="background-color: #4444ff;"></div>
+  </label>
+  </div>
+  </div>
+  <div class="dialog-section">
+  <label>Quantité</label>
+  <div class="dialog-quantity">
+  <input type="number" value="1" min="1">
+  </div>
+  </div>
+  <div class="dialog-actions">
+  <label for="dialog1" class="dialog-btn cancel">Annuler</label>
+  <label for="dialog1" class="dialog-btn confirm">Confirmer</label>
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="article-details">
+  <span><i class="fas fa-palette"></i> Blanc</span>
+  <span><i class="fas fa-box"></i> 1 unité</span>
+  </div>
+  </div>
+  <div class="article-actions">
+  <div class="quantity-control">
+  <input type="number" value="1" min="1">
+  </div>
+  <div class="article-price">20 000 FCFA</div>
+  <a href="#" class="delete-btn">
+  <i class="fas fa-trash"></i>
+  </a>
+  </div>
+  </div>
+  
+  <!-- Article 2 -->
+  <div class="article">
+  <input type="checkbox" class="article-checkbox">
+  <img src="https://media.istockphoto.com/id/1419137816/photo/wireless-in-ear-headphones-with-a-case-on-a-pink-background-flat-lay.webp?a=1&b=1&s=612x612&w=0&k=20&c=axs6Mit2zi5g0rY_UnxIDkmcdqD_zdPE1ZsvufksRaU=" alt="Casque Sans Fil">
+  <div class="article-info">
+  <div class="article-name">
+  <label for="dialog2" style="cursor: pointer; color: inherit;">Casque Sans Fil Premium</label>
+  <input type="checkbox" id="dialog2">
+  <div class="dialog-overlay">
+  <div class="dialog">
+  <label for="dialog2" class="dialog-close">×</label>
+  <h3 class="dialog-title">Casque Sans Fil Premium</h3>
+  <div class="dialog-section">
+  <label>Couleur</label>
+  <div class="color-options">
+  <label class="color-option">
+  <input type="radio" name="color2">
+  <div class="color-box" style="background-color: #ffffff; border: 1px solid #ccc;"></div>
+  </label>
+  <label class="color-option">
+  <input type="radio" name="color2" checked>
+  <div class="color-box" style="background-color: #000000;"></div>
+  </label>
+  <label class="color-option">
+  <input type="radio" name="color2">
+  <div class="color-box" style="background-color: #ff4444;"></div>
+  </label>
+  <label class="color-option">
+  <input type="radio" name="color2">
+  <div class="color-box" style="background-color: #4444ff;"></div>
+  </label>
+  </div>
+  </div>
+  <div class="dialog-section">
+  <label>Quantité</label>
+  <div class="dialog-quantity">
+  <input type="number" value="2" min="1">
+  </div>
+  </div>
+  <div class="dialog-actions">
+  <label for="dialog2" class="dialog-btn cancel">Annuler</label>
+  <label for="dialog2" class="dialog-btn confirm">Confirmer</label>
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="article-details">
+  <span><i class="fas fa-palette"></i> Noir</span>
+  <span><i class="fas fa-box"></i> 2 unités</span>
+  </div>
+  </div>
+  <div class="article-actions">
+  <div class="quantity-control">
+  <input type="number" value="2" min="1">
+  </div>
+  <div class="article-price">25 000 FCFA</div>
+  <a href="#" class="delete-btn">
+  <i class="fas fa-trash"></i>
+  </a>
+  </div>
+  </div>
+  
+  <!-- Article 3 -->
+  <div class="article">
+  <input type="checkbox" class="article-checkbox">
+  <img src="https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?auto=format&fit=crop&q=60&w=700" alt="Écouteurs Sport">
+  <div class="article-info">
+  <div class="article-name">
+  <label for="dialog3" style="cursor: pointer; color: inherit;">Écouteurs Sport Bluetooth</label>
+  <input type="checkbox" id="dialog3">
+  <div class="dialog-overlay">
+  <div class="dialog">
+  <label for="dialog3" class="dialog-close">×</label>
+  <h3 class="dialog-title">Écouteurs Sport Bluetooth</h3>
+  <div class="dialog-section">
+  <label>Couleur</label>
+  <div class="color-options">
+  <label class="color-option">
+  <input type="radio" name="color3">
+  <div class="color-box" style="background-color: #ffffff; border: 1px solid #ccc;"></div>
+  </label>
+  <label class="color-option">
+  <input type="radio" name="color3">
+  <div class="color-box" style="background-color: #000000;"></div>
+  </label>
+  <label class="color-option">
+  <input type="radio" name="color3" checked>
+  <div class="color-box" style="background-color: #ff4444;"></div>
+  </label>
+  <label class="color-option">
+  <input type="radio" name="color3">
+  <div class="color-box" style="background-color: #4444ff;"></div>
+  </label>
+  </div>
+  </div>
+  <div class="dialog-section">
+  <label>Quantité</label>
+  <div class="dialog-quantity">
+  <input type="number" value="1" min="1">
+  </div>
+  </div>
+  <div class="dialog-actions">
+  <label for="dialog3" class="dialog-btn cancel">Annuler</label>
+  <label for="dialog3" class="dialog-btn confirm">Confirmer</label>
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="article-details">
+  <span><i class="fas fa-palette"></i> Rouge</span>
+  <span><i class="fas fa-box"></i> 1 unité</span>
+  </div>
+  </div>
+  <div class="article-actions">
+  <div class="quantity-control">
+  <input type="number" value="1" min="1">
+  </div>
+  <div class="article-price">30 000 FCFA</div>
+  <a href="#" class="delete-btn">
+  <i class="fas fa-trash"></i>
+  </a>
+  </div>
+  </div>
+  </section>
+  
+  <!-- RESUME -->
+  <aside class="cart-summary">
+  <h3 class="summary-title">Résumé</h3>
+  <div class="summary-line">
+  <span>Vos articles font:</span>
+  <span>75 000 FCFA</span>
+  </div>
+  <div class="summary-line">
+  <span>Livraison</span>
+  <span>1 000 FCFA</span>
+  </div>
+  <div class="summary-line total">
+  <span>Total</span>
+  <span>76 000 FCFA</span>
+  </div>
+  <button class="checkout-btn">Procéder au paiement</button>
+  </aside>
+  </main>
+  
+  <!-- FOOTER -->
+  <footer class="footer">
+  <div class="footer-top">
+  <div class="footer-left">
+  <h2 class="footer-logo">TechStorm</h2>
+  <p class="footer-slogan">Le futur entre vos mains</p>
+  <div class="footer-links-socials">
+  <div class="footer-links">
+  <a href="#">Accueil</a>
+  <a href="#">À propos</a>
+  <a href="#">Catalogue</a>
+  <a href="#">Contact</a>
+  </div>
+  <div class="footer-socials">
+  <a href="#"><img src="icones/facebook.svg" alt="Facebook" /></a>
+  <a href="#"><img src="icones/instagram.svg" alt="Instagram" /></a>
+  <a href="#"><img src="icones/linkedin.svg" alt="LinkedIn" /></a>
+  </div>
+  </div>
+  </div>
   <div class="footer-newsletter">
-    <p class="newsletter-text">Abonnez-vous à notre newsletter</p>
-    <div class="newsletter-form">
-      <input type="email" placeholder="Votre email" class="newsletter-input" />
-      <button class="newsletter-button">S’abonner</button>
-    </div>
+  <p class="newsletter-text">Abonnez-vous à notre newsletter</p>
+  <div class="newsletter-form">
+  <input type="email" placeholder="Votre email" class="newsletter-input" />
+  <button class="newsletter-button">S'abonner</button>
   </div>
-</div>
+  </div>
+  </div>
   <div class="footer-bottom">
-    <p>© 2025 TechStorm – Tous droits réservés.</p>
+  <p>© 2025 TechStorm – Tous droits réservés.</p>
   </div>
-</footer>
-
+  </footer>
   </body>
-</html>
+  </html>

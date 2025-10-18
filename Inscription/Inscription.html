@@ -3,35 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Inscription/Inscription.css">
     <title>Inscription</title>
     
 </head>
 <body>
-    <div class="glow"></div>
-    <div class="Login container">
-         <div class="brand"></div>
-         <div class="login-card">
-        
-            <h1>Créer un compte</h1>
-            <button class="google-btn">
-                 <img src="https://www.svgrepo.com/show/355037/google.svg" alt="Google" />
-                S'inscrire avec Google</button>
-              <div class="separator"><span>OU</span></div>
-              
-
-    <form>
-      <input type="pseudo" placeholder="Pseudo" required />
-      <input type="email" placeholder="E-mail" required />
-      <input type="password" placeholder="Mot de passe" required />
-      
-      <button type="submit" class="login-btn">S'INSCRIRE</button>
-    </form>
-
-    <p class="register">
-       Déja un compte ? <a href="Authentication.html">Connectez-vous</a>.
-    </p>
-  </div>
+<div class="Author">TechStorm</div>
+<div class="login-card">
+    <h1 id ="CreerUnCompte">Créer un compte</h1>
+    <button id="google-btn">
+        <div><img src="https://www.svgrepo.com/show/355037/google.svg" alt="Google" /></div>
+        <div>S'inscrire avec Google</div>
+    </button>
+    <div id="ou"> <div><hr class="line"></div> <div>OU</div> <div><hr class="line"></div> </div>
+    <div class="form">
+        <div><input type="text" placeholder="Pseudo" required></div>
+        <div><input type="email" placeholder="E-mail" required /></div>
+        <div><input type="password" placeholder="Mot de passe" required/></div>
+        <button type="submit" id="signUp-btn">S'inscrire</button>
     </div>
-    
+    <p class="register">
+        <span id="DejaCompte">Déja un compte?</span> <a href="../Authentification/Authentication.html" id="ConnectezVous">Connectez Vous</a>.
+    </p>
+</div>
+
 </body>
 </html>

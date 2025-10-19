@@ -26,7 +26,7 @@
   align-items: center;
 }
 
-.user-picture {
+.user-picture, .user-picture img {
   width: 150px;
   height: 150px;
   background-color: #333;

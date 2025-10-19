@@ -130,6 +130,7 @@
 .product-item img {
   width: 70px;
   height: 70px;
+  font-size: small;
   border-radius: 8px;
   object-fit: cover;
 }

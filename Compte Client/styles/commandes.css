@@ -1,18 +1,3 @@
-.details-orders {
-  flex: 1;
-  padding: 40px 60px;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  overflow-y: auto;
-}
-
-.details-orders h1 {
-  font-size: 2rem;
-  color: #8a2be2;
-  margin-bottom: 20px;
-}
-
 /* Barre de recherche et filtres */
 .order-search-bar {
   display: flex;

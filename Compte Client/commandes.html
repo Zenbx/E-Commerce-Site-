@@ -8,10 +8,10 @@
     content="TechStorm - Votre boutique e-commerce futuriste spécialisée dans les technologies innovantes." />
   <meta name="author" content="Zenbx" />
   <title>TechStorm - Mes commandes</title>
-  <link rel="stylesheet" href="global.css" />
-  <link rel="stylesheet" href="commandes.css" />
-  <link rel="stylesheet" href="sidebar.css" />
-  <link rel="stylesheet" href="header-footer-cc.css" />
+  <link rel="stylesheet" href="styles/global.css" />
+  <link rel="stylesheet" href="styles/commandes.css" />
+  <link rel="stylesheet" href="styles/profil-client.css" />
+  <link rel="stylesheet" href="styles/header-footer-cc.css" />
   <link rel="icon" href="favicon.ico" />
 </head>
 
@@ -30,7 +30,7 @@
     </nav>
 
     <div class="buttons">
-      <button class="connexion-button">Se Connecter</button>
+      <button class="connexion-button" onclick="window.location.href='../Authentification/Authentication.html'">Se Connecter</button>
       <button class="pay-button">Acheter</button>
     </div>
   </header>
@@ -40,28 +40,28 @@
     <div class="left-side-bar">
       <div class="user-picture-name">
         <div class="user-picture">
-          <img src="" alt="photo de profil" />
+          <img src="images/ERGO PROXY.jpg" alt="photo de profil" />
         </div>
-        <div class="username">Isabelle MAGNE</div>
+        <div class="username">Utilisateur</div>
       </div>
 
       <div class="info">
         <a class="profile" href="compte-client.html">Informations personnelles</a>
         <hr class="separator" />
 
-        <a class="orders active" href="#">Mes commandes</a>
+        <a class="orders active" href="commandes.html">Mes commandes</a>
         <hr class="separator" />
 
         <a class="preferences" href="#">Mes favoris</a>
         <hr class="separator" />
 
-        <a class="Parameters" href="#">Paramètres</a>
+        <a class="Parameters" href="paramètres.html">Paramètres</a>
       </div>
       <div class="logout">Déconnexion</div>
     </div>
 
     <!-- SECTION COMMANDES -->
-    <div class="details-orders">
+    <div class="main-section">
       <h1>Mes commandes</h1>
 
       <!-- Barre de recherche et filtre -->
@@ -70,7 +70,6 @@
         <select class="order-filter">
           <option value="all">Toutes</option>
           <option value="en_cours">En cours</option>
-          <option value="expédiée">Expédiées</option>
           <option value="livrée">Livrées</option>
           <option value="annulée">Annulées</option>
         </select>
@@ -82,7 +81,7 @@
         <!-- Commande 1 -->
         <div class="order-card">
           <div class="order-header">
-            <h3>Commande #TS-2025-001</h3>
+            <h3>Commande #KSKSIO29292K</h3>
             <span class="order-status status-en-cours">En cours</span>
           </div>
           <p class="order-date">Passée le : 15 octobre 2025</p>
@@ -92,14 +91,14 @@
 
           <div class="order-products">
             <div class="product-item">
-              <img src="produits/casque.jpg" alt="Casque VR TechStorm X" />
+              <img src="images/casque.jpg" alt="Casque VR TechStorm X" />
               <div class="product-info">
                 <h4>Casque VR TechStorm X</h4>
                 <p>Quantité : 1</p>
               </div>
             </div>
             <div class="product-item">
-              <img src="produits/gants.jpg" alt="Gants haptiques Pro" />
+              <img src="images/gants.jpg" alt="Gants haptiques Pro" />
               <div class="product-info">
                 <h4>Gants haptiques Pro</h4>
                 <p>Quantité : 1</p>
@@ -119,7 +118,7 @@
         <!-- Commande 2 -->
         <div class="order-card">
           <div class="order-header">
-            <h3>Commande #TS-2025-002</h3>
+            <h3>Commande #KSDQKQKQKQ</h3>
             <span class="order-status status-livrée">Livrée</span>
           </div>
           <p class="order-date">Passée le : 1 octobre 2025</p>
@@ -129,7 +128,85 @@
 
           <div class="order-products">
             <div class="product-item">
-              <img src="produits/drone.jpg" alt="Mini Drone AI Storm" />
+              <img src="images/drone.png" alt="Mini Drone AI Storm" />
+              <div class="product-info">
+                <h4>Mini Drone AI Storm</h4>
+                <p>Quantité : 1</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="order-actions">
+            <button class="btn-view-details">Voir les détails</button>
+            <button class="btn-leave-review">Laisser un avis</button>
+          </div>
+        </div>
+
+        <div class="order-card">
+          <div class="order-header">
+            <h3>Commande #KSDQKQKQKQ</h3>
+            <span class="order-status status-annulée">Annulée</span>
+          </div>
+          <p class="order-date">Passée le : 1 octobre 2025</p>
+          <p class="order-total">
+            Montant total : <strong>149,00 €</strong>
+          </p>
+
+          <div class="order-products">
+            <div class="product-item">
+              <img src="images/drone.png" alt="Mini Drone AI Storm" />
+              <div class="product-info">
+                <h4>Mini Drone AI Storm</h4>
+                <p>Quantité : 1</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="order-actions">
+            <button class="btn-view-details">Voir les détails</button>
+            <button class="btn-leave-review">Laisser un avis</button>
+          </div>
+        </div>
+
+        <div class="order-card">
+          <div class="order-header">
+            <h3>Commande #KSDQKQKQKQ</h3>
+            <span class="order-status status-livrée">Livrée</span>
+          </div>
+          <p class="order-date">Passée le : 1 octobre 2025</p>
+          <p class="order-total">
+            Montant total : <strong>149,00 €</strong>
+          </p>
+
+          <div class="order-products">
+            <div class="product-item">
+              <img src="images/drone.png" alt="Mini Drone AI Storm" />
+              <div class="product-info">
+                <h4>Mini Drone AI Storm</h4>
+                <p>Quantité : 1</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="order-actions">
+            <button class="btn-view-details">Voir les détails</button>
+            <button class="btn-leave-review">Laisser un avis</button>
+          </div>
+        </div>
+
+        <div class="order-card">
+          <div class="order-header">
+            <h3>Commande #KSDQKQKQKQ</h3>
+            <span class="order-status status-livrée">Livrée</span>
+          </div>
+          <p class="order-date">Passée le : 1 octobre 2025</p>
+          <p class="order-total">
+            Montant total : <strong>149,00 €</strong>
+          </p>
+
+          <div class="order-products">
+            <div class="product-item">
+              <img src="images/drone.png" alt="Mini Drone AI Storm" />
               <div class="product-info">
                 <h4>Mini Drone AI Storm</h4>
                 <p>Quantité : 1</p>

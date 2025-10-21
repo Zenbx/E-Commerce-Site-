@@ -1,22 +1,35 @@
-/* ===== PAGE COMMANDES ===== */
-.details-orders {
-  padding: 30px;
+/* Barre de recherche et filtres */
+.order-search-bar {
   display: flex;
-  flex-direction: column;
-  gap: 20px;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  background: #1a1a1c;
+  border-radius: 10px;
+  padding: 10px 20px;
+  gap: 10px;
 }
 
-.details-orders h1 {
-  font-size: 2rem;
-  color: #8a2be2;
-  margin-bottom: 20px;
+.order-search-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
 }
 
-/* Masquer les autres sections */
-.details-personnal-info,
-.details-favoris,
-.details-parameters {
-  display: none;
+.order-search-input:focus {
+  outline: none;
+}
+
+.order-filter {
+  background: #1c1c1e;
+  color: #fff;
+  border: 1px solid #333;
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-size: 0.95rem;
+  cursor: pointer;
 }
 
 /* Liste des commandes */
@@ -26,6 +39,7 @@
   gap: 25px;
 }
 
+/* Carte commande */
 .order-card {
   background: #1c1c1e;
   border-radius: 12px;
@@ -34,10 +48,11 @@
   transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
 
+/* 
 .order-card:hover {
   transform: translateY(-3px);
   box-shadow: 0 0 15px rgba(138, 43, 226, 0.4);
-}
+} */
 
 .order-header {
   display: flex;
@@ -80,6 +95,7 @@
   margin-bottom: 5px;
 }
 
+/* Produits dans la commande */
 .order-products {
   display: flex;
   flex-wrap: wrap;
@@ -99,6 +115,7 @@
 .product-item img {
   width: 70px;
   height: 70px;
+  font-size: small;
   border-radius: 8px;
   object-fit: cover;
 }
@@ -113,6 +130,7 @@
   color: #ccc;
 }
 
+/* Boutons commande */
 .order-actions {
   display: flex;
   gap: 10px;

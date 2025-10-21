@@ -6,9 +6,10 @@
     <meta name="description" content="TechStorm - Votre boutique e-commerce futuriste spécialisée dans les technologies innovantes." />
     <meta name="author" content="Zenbx" />
     <title>TechStorm - Catalogue</title>
-    <link rel="stylesheet" href="catalogue.css" />
-    <link rel="stylesheet" href="header-footer.css" />
-    <link rel="stylesheet" href="produit.css" />
+    <link rel="stylesheet" href="styles/catalogue.css" />
+    <link rel="stylesheet" href="styles/header-footer.css" />
+    <link rel="stylesheet" href="style/quick-view.css" />
+    <link rel="stylesheet" href="styles/produit.css" />
     <link rel="icon" href="favicon.ico" />
   </head>
 
@@ -21,18 +22,18 @@
         <ul class="nav-links">
           <li><a href="../Accueil/accueil.html">Accueil</a></li>
           <li><a href="../A propos/a_propos.html">À propos</a></li>
-          <li><a href="../Accueil/accueil.html">Catalogue</a></li>
+          <li><a href="../Catalogue/catalogue.html">Catalogue</a></li>
           <li><a href="../Contact/page.html">Contact</a></li>
         </ul>
       </nav>
 
       <div class="buttons">
-        <button class="connexion-button">Se Connecter</button>
-        <button class="pay-button">Acheter <span id="cart-count" aria-live="polite" class="cart-count">0</span></button>
+        <button class="connexion-button" onclick="window.location.href='../Authentification/Authentication.html'">Se Connecter</button>
+        <button class="pay-button" onclick="window.location.href='../Panier/page.html'">Acheter <span id="cart-count" aria-live="polite" class="cart-count">0</span></button>
       </div>
     </header>
 
-    <!-- CONTENU CATALOGUE AMÉLIORÉ -->
+    <!-- CONTENU CATALOGUE -->
     <main class="hero">
       <section class="catalogue" aria-label="Catalogue de produits">
         <!-- Barre latérale filtres -->
@@ -41,7 +42,7 @@
 
           <div class="filter-group">
             <label for="search" class="visually-hidden">Rechercher</label>
-            <input id="search" type="search" placeholder="Rechercher un produit, ex: Airpods" />
+            <input id="search" type="search" placeholder="Rechercher un produit..." />
           </div>
 
           <div class="filter-group">
@@ -49,17 +50,25 @@
             <ul class="filter-list" id="category-filters">
               <li><label><input type="checkbox" value="Smartphones" /> <span>Smartphones</span></label></li>
               <li><label><input type="checkbox" value="Laptops" /> <span>Laptops</span></label></li>
-              <li><label><input type="checkbox" value="Montres" /> <span>Montres</span></label></li>
+              <li><label><input type="checkbox" value="Tablettes" /> <span>Tablettes</span></label></li>
               <li><label><input type="checkbox" value="Écouteurs" /> <span>Écouteurs</span></label></li>
-              <li><label><input type="checkbox" value="Accessoires" /> <span>Accessoires</span></label></li>
+              <li><label><input type="checkbox" value="Appareils Photo" /> <span>Appareils Photo</span></label></li>
+            </ul>
+          </div>
+
+          <!-- NOUVEAU : Filtre par marque -->
+          <div class="filter-group">
+            <h4>Marques</h4>
+            <ul class="filter-list" id="brand-filters">
+              <!-- Les marques seront générées dynamiquement par JS -->
             </ul>
           </div>
 
           <div class="filter-group">
             <h4>Prix</h4>
             <div class="price-range">
-              <input type="range" id="price-range" min="0" max="300000" step="1000" value="300000" />
-              <div class="price-value">Max : <span id="price-max">300&nbsp;000</span> FCFA</div>
+              <input type="range" id="price-range" min="0" max="3000000" step="10000" value="3000000" />
+              <div class="price-value">Max : <span id="price-max">3&nbsp;000&nbsp;000</span> FCFA</div>
             </div>
           </div>
 
@@ -102,9 +111,9 @@
       </section>
     </main>
 
-    <!-- FOOTER (INCHANGÉ) -->
+    <!-- FOOTER  -->
     <footer class="footer">
-      <div class = "footer-top">
+      <div class="footer-top">
         <div class="footer-left">
           <h2 class="footer-logo">TechStorm</h2>
           <p class="footer-slogan">Le futur entre vos mains</p>
@@ -128,7 +137,7 @@
           <p class="newsletter-text">Abonnez-vous à notre newsletter</p>
           <div class="newsletter-form">
             <input type="email" placeholder="Votre email" class="newsletter-input" />
-            <button class="newsletter-button">S’abonner</button>
+            <button class="newsletter-button">S'abonner</button>
           </div>
         </div>
       </div>
@@ -146,6 +155,7 @@
         </div>
       </div>
     </div>
+
 
     <!-- SCRIPT: données + fonctionnalité catalogue -->
     <script src="catalogue.js" ></script>

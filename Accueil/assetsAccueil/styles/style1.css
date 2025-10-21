@@ -145,13 +145,13 @@
 
 @keyframes float-rotate {
   0% {
-    transform: translateY(-50%) translateY(-50px) rotate(10deg);
+    transform: translateY(-50%) translateY(-60px) rotate(15deg);
   }
   50% {
     transform: translateY(-50%) translateY(0px) rotate(0deg);
   }
   100% {
-    transform: translateY(-50%) translateY(-50px) rotate(10deg);
+    transform: translateY(-50%) translateY(-630px) rotate(15deg);
   }
 }
 

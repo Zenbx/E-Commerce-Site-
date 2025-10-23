@@ -60,8 +60,6 @@
     </div>
 
     <!-- SECTION PARAMETRES -->
-    <div class="main-section">
-          <!-- SECTION PARAMÈTRES (remplace uniquement la div.main-section précédente) -->
     <div class="main-section settings-page" id="settingsPage" aria-live="polite">
       <h1>Paramètres du compte</h1>
 
@@ -232,73 +230,6 @@
 
           <div class="card-actions">
             <button class="btn outline" id="addPaymentBtn">Ajouter une méthode de paiement</button>
-          </div>
-        </div>
-      </section>
-
-      <!-- Sécurité -->
-      <section class="settings-section" id="securitySection" aria-labelledby="securityTitle">
-        <div class="section-header">
-          <h2 id="securityTitle"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 1 3 5v6c0 5 3.8 9.7 9 11 5.2-1.3 9-6 9-11V5l-9-4z"/></svg> Sécurité</h2>
-          <p class="section-sub">Options de sécurité et sessions actives.</p>
-        </div>
-
-        <div class="card">
-          <div class="switch-row">
-            <label class="switch">
-              <input type="checkbox" id="twoFactorToggle">
-              <span class="slider"></span>
-            </label>
-            <div class="switch-info">
-              <strong>Activer la double authentification (2FA)</strong>
-              <p class="muted">Ajoute une couche de sécurité supplémentaire.</p>
-            </div>
-          </div>
-
-          <div class="sessions">
-            <h3 class="sessions-title">Sessions actives</h3>
-            <ul class="session-list" id="sessionList">
-              <li class="session-item">
-                <div>
-                  <strong>Ordinateur — Chrome</strong>
-                  <p class="muted">Douala — Aujourd'hui</p>
-                </div>
-                <button class="btn ghost small" data-logout-session>Déconnexion</button>
-              </li>
-              <li class="session-item">
-                <div>
-                  <strong>Téléphone — Android</strong>
-                  <p class="muted">Douala — Hier</p>
-                </div>
-                <button class="btn ghost small" data-logout-session>Déconnexion</button>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <!-- Accessibilité -->
-      <section class="settings-section" id="accessSection" aria-labelledby="accessTitle">
-        <div class="section-header">
-          <h2 id="accessTitle"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 3a9 9 0 100 18 9 9 0 000-18zM7 12a5 5 0 015-5v5H7z"/></svg> Accessibilité</h2>
-          <p class="section-sub">Ajustez l'affichage pour votre confort visuel.</p>
-        </div>
-
-        <div class="card form-grid-2">
-          <label class="form-group">
-            <span>Taille du texte</span>
-            <input type="range" id="fontSizeRange" min="14" max="22" value="18" />
-            <div class="range-value" id="fontSizeValue">18px</div>
-          </label>
-
-          <div class="form-group">
-            <span>Contraste élevé</span>
-            <div class="switch-row no-border">
-              <label class="switch">
-                <input type="checkbox" id="highContrastToggle">
-                <span class="slider"></span>
-              </label>
-            </div>
           </div>
         </div>
       </section>

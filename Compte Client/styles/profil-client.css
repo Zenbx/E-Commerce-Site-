@@ -126,20 +126,20 @@
 }
 
 /* Scrollbar personnalisée pour la sidebar */
-.left-side-bar::-webkit-scrollbar {
+.client-informations::-webkit-scrollbar {
   width: 6px;
 }
 
-.left-side-bar::-webkit-scrollbar-track {
+.client-informations::-webkit-scrollbar-track {
   background: #1c1c1e;
 }
 
-.left-side-bar::-webkit-scrollbar-thumb {
+.client-informations::-webkit-scrollbar-thumb {
   background: #333;
   border-radius: 3px;
 }
 
-.left-side-bar::-webkit-scrollbar-thumb:hover {
+.client-informations::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
 

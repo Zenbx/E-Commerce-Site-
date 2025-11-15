@@ -19,6 +19,10 @@
   <header class="header">
     <a href="../Accueil/accueil.html" class="logo">TechStorm</a>
 
+     <button class="menu-toggle" aria-label="Ouvrir le menu">
+          ☰
+      </button>
+
     <nav>
       <ul class="nav-links">
         <li><a href="../Accueil/accueil.html">Accueil</a></li>
@@ -360,6 +364,15 @@
       <p>© 2025 TechStorm – Tous droits réservés.</p>
     </div>
   </footer>
+  <script>
+  const toggleBtn = document.querySelector(".menu-toggle");
+  const nav = document.querySelector("header nav");
+
+  toggleBtn.addEventListener("click", () => {
+    nav.classList.toggle("active");
+  });
+</script>
+
 </body>
 
 </html>

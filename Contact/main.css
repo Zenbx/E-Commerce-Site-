@@ -256,3 +256,121 @@
     transform: translateY(0);
   }
 }
+
+/* ============================
+        📱 RESPONSIVE
+============================ */
+
+/* --- TABLETTES --- */
+@media screen and (max-width: 1024px) {
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    .contact-wrapper {
+        grid-template-columns: 1fr; /* Une colonne */
+        gap: 2rem;
+    }
+
+    .contact-form,
+    .contact-info,
+    .faq-section,
+    .map-section {
+        padding: 2rem;
+    }
+}
+
+/* --- SMARTPHONES (grands) --- */
+@media screen and (max-width: 768px) {
+
+    .hero {
+        padding: 3rem 1.5rem;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .container {
+        padding: 0 1.5rem;
+    }
+
+    .contact-form h2 {
+        font-size: 1.5rem;
+    }
+
+    .info-card h3,
+    .faq-section h2 {
+        font-size: 1.6rem;
+    }
+
+    .info-item {
+        gap: 1rem;
+    }
+
+    .info-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    .map-placeholder {
+        height: 250px;
+        font-size: 1rem;
+    }
+}
+
+/* --- TÉLÉPHONES PETITS --- */
+@media screen and (max-width: 480px) {
+
+    .hero {
+        padding: 2.5rem 1rem;
+    }
+
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero p {
+        font-size: 0.95rem;
+    }
+
+    .contact-form,
+    .info-card,
+    .faq-section,
+    .map-section {
+        padding: 1.5rem;
+        border-radius: 8px;
+    }
+
+    .btn-submit {
+        font-size: 1rem;
+        padding: 0.9rem;
+    }
+
+    .info-icon {
+        width: 36px;
+        height: 36px;
+    }
+
+    .map-placeholder {
+        height: 200px;
+    }
+
+    .faq-item h3 {
+        font-size: 1.1rem;
+    }
+
+    .faq-item p {
+        font-size: 0.95rem;
+    }
+}

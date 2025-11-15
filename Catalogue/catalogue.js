@@ -369,3 +369,12 @@ sortEl.addEventListener('change', applyFilters);
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') closeModal();
 });
+
+
+  const toggleBtn = document.querySelector(".menu-toggle");
+  const nav = document.querySelector("header nav");
+
+  toggleBtn.addEventListener("click", () => {
+    nav.classList.toggle("active");
+  });
+

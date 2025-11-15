@@ -7,6 +7,7 @@
     <meta name="author" content="Zenbx" />
     <title>TechStorm - Site de E-commerce</title>
     <link rel="stylesheet" href="a_propos.css" />
+    <link rel="stylesheet" href="header-footer.css" />
     <link rel="icon" href="favicon.ico" />
   </head>
 
@@ -14,6 +15,10 @@
     <!-- HEADER -->
     <header class="header">
       <a href="../Accueil/accueil.html" class="logo">TechStorm</a>
+
+       <button class="menu-toggle" aria-label="Ouvrir le menu">
+          ☰
+      </button>
 
       <nav>
         <ul class="nav-links">
@@ -113,6 +118,14 @@
     <p>© 2025 TechStorm – Tous droits réservés.</p>
   </div>
 </footer>
+ <script>
+  const toggleBtn = document.querySelector(".menu-toggle");
+  const nav = document.querySelector("header nav");
+
+  toggleBtn.addEventListener("click", () => {
+    nav.classList.toggle("active");
+  });
+</script>
 
   </body>
 </html>

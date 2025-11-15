@@ -1,10 +1,13 @@
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
+/* ===== GLOBAL ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-html, body { height: 100%; }
+html, body {
+  height: 100%;
+}
 
 body {
   margin: 0;
@@ -25,6 +28,7 @@ body {
   background-color: #1C1C1E;
   color: #FFFFFF;
   padding: 8px 24px;
+  flex-wrap: wrap; /* Permet au contenu de passer à la ligne si nécessaire */
   z-index: 1;
 }
 
@@ -38,7 +42,8 @@ body {
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 100px;
+  gap: 40px; /* réduit l’écart sur petits écrans */
+  flex-wrap: wrap; /* nav se replie si écran étroit */
 }
 
 .nav-links li a {
@@ -52,13 +57,13 @@ body {
   color: #8a2be2;
 }
 
-/* ===== BUTTONS ===== */
 .buttons {
   display: flex;
   gap: 10px;
+  flex-wrap: wrap; /* pour éviter overflow */
 }
 
-
+/* ===== BUTTONS ===== */
 .connexion-button {
   position: relative;
   padding: 10px 14px;
@@ -66,7 +71,6 @@ body {
   border-radius: 8px;
   background-color: #1C1C1E;
   color: white;
-  z-index: 0;
   cursor: pointer;
   font-weight: 600;
 }
@@ -75,12 +79,10 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  padding: 2px; /* épaisseur de la bordure */
-  border-radius: 8px; /* même radius */
+  padding: 2px;
+  border-radius: 8px;
   background: linear-gradient(90deg, #0066FF, #8A2BE2);
-  -webkit-mask: 
-    linear-gradient(#fff 0 0) content-box, 
-    linear-gradient(#fff 0 0);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   z-index: -1;
@@ -91,7 +93,6 @@ body {
   color: #fff;
   box-shadow: 0 0 10px rgba(0, 102, 255, 0.6), 0 0 20px rgba(138, 43, 226, 0.6);
 }
-
 
 .pay-button {
   padding: 6px 30px;
@@ -109,35 +110,27 @@ body {
   transform: translateY(-2px);
 }
 
-/* ===== HEADER ===== */
-
-
 /* ===== FOOTER ===== */
 .footer {
-  bottom : 0;
   background: radial-gradient(circle at top left, #141416, #0e0e0f);
   color: #fff;
-  padding: 60px 10vw 40px;
+  padding: 60px 5vw 40px;
   width: 100%;
-  margin: auto auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
 .footer-top {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  /*grid-template-columns: repeat(3, minmax(0, 1fr));*/
-  gap: 20px;
-}
-
-.footer > * {
-  min-width: 0; /* permet aux colonnes de rétrécir correctement */
+  align-items: flex-start;
+  flex-wrap: wrap; /* Permet aux colonnes de se placer en dessous sur petits écrans */
+  gap: 30px;
 }
 
 .footer-left {
-  margin: 50px 50px;
-  align-self: start;
-  
+  flex: 1 1 300px; /* largeur minimum 300px */
 }
 
 .footer-left h2 {
@@ -153,12 +146,8 @@ body {
   margin-bottom: 20px;
 }
 
-.footer-links-socials {
-  /*display: flex;
-  flex-direction: column; 
-  align-items: flex-start;*/
-  margin-top: 30px;
-  gap: 20px;
+.footer-links, .footer-socials {
+  margin-top: 20px;
 }
 
 .footer-links a {
@@ -188,10 +177,9 @@ body {
 
 /* Newsletter */
 .footer-newsletter {
-  margin-right: 50px;
-  margin-top: 50px;
+  flex: 1 1 250px;
   text-align: right;
-  align-self: start; /* aligne en haut de la colonne */
+  margin-top: 20px;
 }
 
 .newsletter-text {
@@ -203,6 +191,7 @@ body {
   display: flex;
   justify-content: flex-end;
   gap: 10px;
+  flex-wrap: wrap;
 }
 
 .newsletter-input {
@@ -241,14 +230,111 @@ body {
 
 /* Ligne du bas */
 .footer-bottom {
-  grid-column: 1 / 4;
   text-align: center;
   border-top: 1px solid #222;
   padding-top: 20px;
   font-size: 0.85rem;
   color: #777;
-  margin-top: 40px;
 }
 
-/* ===== FOOTER ===== */
+/* ===== MEDIA QUERIES ===== */
+@media screen and (max-width: 1024px) {
+  .nav-links {
+    gap: 20px;
+  }
+  .footer-top {
+    gap: 20px;
+  }
+}
 
+@media screen and (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .buttons {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+  .footer-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .footer-newsletter {
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 16px;
+  }
+  .newsletter-input {
+    width: 100%;
+  }
+  .pay-button {
+    width: 100%;
+  }
+}
+
+/* ============================
+   MENU MOBILE GLISSANT
+============================ */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 830px) {
+
+  /* Bouton visible */
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Cache la nav par défaut */
+  nav {
+    position: fixed;
+    top: 0;
+    right: -250px; /* caché */
+    width: 250px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    padding-top: 80px;
+    transition: 0.4s ease-in-out;
+    z-index: 999;
+  }
+
+  /* Navigation verticale */
+  .nav-links {
+    flex-direction: column;
+    gap: 25px;
+    padding-left: 20px;
+  }
+
+  /* Quand le menu est ouvert */
+  nav.active {
+    right: 0;
+  }
+
+  /* Cache les boutons à droite dans l’en-tête (se connecter / acheter) */
+  .buttons {
+    display: none;
+  }
+
+  /* Le header devient compact */
+  .header {
+    justify-content: space-between;
+    padding: 12px 20px;
+  }
+}

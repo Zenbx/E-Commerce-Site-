@@ -70,7 +70,7 @@ icones/
 
 | Nom complet                               | Pseudo GitHub        | Email                        |
 |--------------------------------------------|------------------------|------------------------------|
-| BELEKOTAN II Jeff Nichoss m                 | Zenbx                  | jeffbelekotan@gmail.com      |
+| BELEKOTAN II Jeff Nichoss                   | Zenbx                  | jeffbelekotan@gmail.com      |
 | NZIELEU NGNOULAYE M. Nathan                | Nathech23              | nathan.nzieleu@gmail.com     |
 | DEMANOU NGOUFFO BILL NELSON                | ing-Billnelson         | billnelson113@gmail.com      |
 | Bisseck Chalvi Nathanael                   | HinaSejaru124          | bissecknathanael@gmail.com   |

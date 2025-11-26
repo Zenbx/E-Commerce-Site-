@@ -1,4 +1,25 @@
+<<<<<<< HEAD
 
+=======
+<<<<<<< Updated upstream
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+  }
+  
+  body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    background-color: #0a0a0b;
+    color: #ffffff;
+  }
+  
+  
+  
+  /*(coder ici...)*/
+>>>>>>> origin/angela/apropos-panier
   .titre{
     text-align: center;
     margin: 40px 0;
@@ -22,6 +43,34 @@
     animation: fadeInUp 0.9s forwards;
 }
   /* SECTION SCROLL HORIZONTAL */
+=======
+/* TITRE */
+.titre {
+  text-align: center;
+  margin: 40px 0;
+  font-size: 2.5rem;
+  color: #fff;
+  font-weight: 700;
+  transform: translateY(50px);
+  animation: fadeInUp 0.9s forwards;
+}
+
+/* PARAGRAPHE */
+.content {
+  max-width: 800px;
+  margin: 0 auto 60px;
+  padding: 0 20px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #ccc;
+  text-align: justify;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInUp 0.9s forwards;
+}
+
+/* SCROLL HORIZONTAL */
+>>>>>>> Stashed changes
 .scroll-section {
   margin: 4rem 0;
   overflow: hidden;
@@ -33,31 +82,24 @@
   padding: 2rem 0;
   overflow-x: auto;
   scroll-behavior: smooth;
-  
-  /* Style de la scrollbar */
   scrollbar-width: thin;
   scrollbar-color: #6366f1 rgba(99, 102, 241, 0.1);
 }
 
-.developpers::-webkit-scrollbar {
-  height: 8px;
-}
-
+.developpers::-webkit-scrollbar { height: 8px; }
 .developpers::-webkit-scrollbar-track {
   background: rgba(99, 102, 241, 0.1);
   border-radius: 10px;
 }
-
 .developpers::-webkit-scrollbar-thumb {
   background: #6366f1;
   border-radius: 10px;
 }
-
 .developpers::-webkit-scrollbar-thumb:hover {
   background: #8b5cf6;
 }
 
-/* DIV AVEC ANIMATION D'APPARITION */
+/* CARD */
 .dev {
   min-width: 300px;
   height: 400px;
@@ -65,21 +107,17 @@
   border: 1px solid rgba(99, 102, 241, 0.3);
   border-radius: 16px;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
   font-size: 2rem;
   font-weight: bold;
   color: #6366f1;
   flex-shrink: 0;
-  
-  /* Animation d'apparition */
   opacity: 0;
   transform: translateY(30px);
   animation: fadeInUp 0.6s ease-out forwards;
 }
 
-
-/* Images dans les divs */
+/* IMAGE */
 .dev img {
   width: 100%;
   height: 250px;
@@ -87,14 +125,13 @@
   border-bottom: 1px solid rgba(99, 102, 241, 0.3);
 }
 
-/* Container des informations textuelles */
+/* TEXTES */
 .dev > div {
   padding: 1.5rem;
   width: 100%;
   text-align: end;
 }
 
-/* Paragraphes dans les divs */
 .dev p {
   color: #cbd5e1;
   font-size: 1rem;
@@ -108,28 +145,14 @@
   margin-bottom: 0.8rem;
 }
 
-/* Délai d'animation pour chaque div */
-.dev:nth-child(1) {
-  animation-delay: 0.1s;
-}
+/* ANIM DELAYS */
+.dev:nth-child(1) { animation-delay: 0.1s; }
+.dev:nth-child(2) { animation-delay: 0.2s; }
+.dev:nth-child(3) { animation-delay: 0.3s; }
+.dev:nth-child(4) { animation-delay: 0.4s; }
+.dev:nth-child(5) { animation-delay: 0.5s; }
 
-.dev:nth-child(2) {
-  animation-delay: 0.2s;
-}
-
-.dev:nth-child(3) {
-  animation-delay: 0.3s;
-}
-
-.dev:nth-child(4) {
-  animation-delay: 0.4s;
-}
-
-.dev:nth-child(5) {
-  animation-delay: 0.5s;
-}
-
-/* Effet hover sur les divs */
+/* HOVER */
 .dev:hover {
   transform: translateY(-10px);
   box-shadow: 0 20px 40px rgba(99, 102, 241, 0.3);
@@ -137,7 +160,7 @@
   transition: all 0.3s ease;
 }
 
-/* Animation keyframes */
+/* KEYFRAMES */
 @keyframes fadeInUp {
   to {
     opacity: 1;
@@ -145,4 +168,60 @@
   }
 }
 
+<<<<<<< HEAD
  
+=======
+<<<<<<< Updated upstream
+
+  
+  
+=======
+/* ============================= */
+/* RESPONSIVE DESIGN (IMPORTANT) */
+/* ============================= */
+
+@media (max-width: 768px) {
+  .titre {
+    font-size: 2rem;
+    margin: 20px 0;
+  }
+
+  .content {
+    font-size: 1rem;
+    padding: 0 15px;
+  }
+
+  .dev {
+    min-width: 250px;
+    height: auto;
+  }
+
+  .dev img {
+    height: 200px;
+  }
+
+  .dev > div {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .titre {
+    font-size: 1.6rem;
+    margin: 15px 0;
+  }
+
+  .content {
+    font-size: 0.95rem;
+  }
+
+  .dev {
+    min-width: 220px;
+  }
+
+  .dev img {
+    height: 180px;
+  }
+}
+>>>>>>> Stashed changes
+>>>>>>> origin/angela/apropos-panier

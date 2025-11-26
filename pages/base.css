@@ -1,0 +1,161 @@
+/* ==========================
+   HEADER CONFIG
+========================== */
+
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 40px;
+}
+
+/* Hide menu toggle on desktop */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* NAV LINKS (desktop) */
+.nav-links {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+/* ==========================
+   RESPONSIVE HEADER
+========================== */
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: var(--color-bg-dark);
+    width: 70%;
+    padding: 20px;
+    flex-direction: column;
+    gap: 20px;
+    display: none;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+}
+
+/* ==========================
+   FOOTER COMPLET
+========================== */
+
+.footer-full {
+  background: var(--color-bg-dark);
+  color: white;
+  padding: 60px 0 20px 0;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+.footer-col h3 {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  color: var(--color-primary);
+}
+
+.footer-col h4 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: var(--color-primary);
+}
+
+.footer-col p {
+  color: var(--color-gray-light);
+  line-height: 1.5;
+}
+
+.footer-col ul li a {
+  color: var(--color-gray-light);
+  transition: 0.3s;
+}
+
+.footer-col ul li a:hover {
+  color: var(--color-primary);
+}
+
+/* Newsletter form */
+.newsletter-form {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.newsletter-form input {
+  flex: 1;
+}
+
+/* Social icons */
+.socials {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+}
+
+.socials a {
+  font-size: 1.4rem;
+  color: var(--color-gray-light);
+  transition: 0.3s;
+}
+
+.socials a:hover {
+  color: var(--color-primary);
+}
+
+/* Bandeau du bas */
+.footer-bottom {
+  margin-top: 40px;
+  padding-top: 20px;
+  text-align: center;
+  border-top: 1px solid #ffffff33;
+  color: var(--color-gray-light);
+  font-size: 0.9rem;
+}
+
+/* ==========================
+   RESPONSIVE FOOTER
+========================== */
+@media (max-width: 820px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+  }
+
+  .newsletter-form input {
+    width: 100%;
+  }
+
+  .newsletter-form button {
+    width: 100%;
+  }
+}

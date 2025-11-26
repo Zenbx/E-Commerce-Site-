@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TechNova — Page</title>
+
+    <!-- IMPORTANT : global.css contient déjà reset, boutons, grille, navbar, footer -->
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="base.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER GLOBAL ================= -->
+    <header class="navbar">
+        <div class="container nav-content">
+            <div class="nav-left">
+                <a href="index.html">
+                    <img src="assets/logo.png" class="logo" alt="Logo">
+                </a>
+            </div>
+
+            <nav class="nav-links">
+                <a href="index.html">Accueil</a>
+                <a href="pages/boutique.html">Boutique</a>
+                <a href="pages/categories.html">Catégories</a>
+                <a href="pages/panier.html">Panier</a>
+                <a href="pages/login.html" class="btn btn-outline">Connexion</a>
+            </nav>
+
+            <!-- Menu mobile -->
+            <div class="menu-toggle" id="menuToggle">
+                ☰
+            </div>
+        </div>
+    </header>
+    <!-- ================= END HEADER ================= -->
+
+
+    <!-- ================= CONTENT ================= -->
+    <main class="container section">
+        <h1 class="mb-2">Titre de la page</h1>
+
+        <p>
+            Ceci est le template de base. Chaque membre de l’équipe le copie,
+            remplace le contenu du “main” par celui de sa page,
+            et garde le header + footer.
+        </p>
+    </main>
+    <!-- ================= END CONTENT ================= -->
+
+
+   <!-- ================= FOOTER GLOBAL ================= -->
+<footer class="footer-full">
+    <div class="container footer-grid">
+
+        <!-- Colonne 1 : À propos -->
+        <div class="footer-col">
+            <h3>TechNova</h3>
+            <p>
+                Votre boutique e-commerce moderne et sécurisée.
+                Découvrez nos produits au meilleur prix et profitez d’une expérience fluide.
+            </p>
+        </div>
+
+        <!-- Colonne 2 : Boutique -->
+        <div class="footer-col">
+            <h4>Boutique</h4>
+            <ul>
+                <li><a href="pages/boutique.html">Tous les produits</a></li>
+                <li><a href="pages/categories.html">Catégories</a></li>
+                <li><a href="#">Nouveautés</a></li>
+                <li><a href="#">Promotions</a></li>
+            </ul>
+        </div>
+
+        <!-- Colonne 3 : Support -->
+        <div class="footer-col">
+            <h4>Support</h4>
+            <ul>
+                <li><a href="pages/faq.html">FAQ</a></li>
+                <li><a href="pages/politique-livraison.html">Politique de livraison</a></li>
+                <li><a href="#">Retours & remboursements</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Colonne 4 : Newsletter -->
+        <div class="footer-col">
+            <h4>Newsletter</h4>
+            <p>Recevez nos meilleures offres directement par email.</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Votre email">
+                <button type="submit" class="btn">S'inscrire</button>
+            </form>
+
+            <!-- Réseaux sociaux -->
+            <div class="socials">
+                <a href="#">🌐</a>
+                <a href="#">📘</a>
+                <a href="#">📸</a>
+                <a href="#">🐦</a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Bandeau du bas -->
+    <div class="footer-bottom">
+        © 2025 TechNova E-Commerce — Tous droits réservés
+    </div>
+</footer>
+<!-- ================= END FOOTER ================= -->
+
+
+    <!-- ================= SCRIPT NAV MOBILE ================= -->
+    <script>
+        const toggle = document.getElementById("menuToggle");
+        const links = document.querySelector(".nav-links");
+
+        toggle.addEventListener("click", () => {
+            links.classList.toggle("open");
+        });
+    </script>
+
+</body>
+</html>

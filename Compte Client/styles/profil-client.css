@@ -1,22 +1,25 @@
 .client-informations {
-  display: flex;
-  flex: 1;
-  min-height: calc(100vh - 60px); /* hauteur viewport moins header */
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 24px;
+  padding: 32px 24px 72px;
+  align-items: start;
 }
 
 .left-side-bar {
   position: sticky;
-  top: 60px; /* hauteur du header */
+  top: 76px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: calc(100vh - 60px);
-  width: 275px;
-  min-width: 275px;
-  padding-top: 30px;
+  height: fit-content;
+  max-height: calc(100vh - 92px);
+  width: 100%;
   background-color: #1c1c1e;
+  border-radius: 12px;
   box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
   z-index: 50;
+  overflow: hidden;
 }
 
 .user-picture-name {
@@ -62,6 +65,7 @@
   padding: 20px 30px;
   gap: 5px;
   flex-grow: 1;
+  overflow-y: auto;
 }
 
 .info hr {
@@ -118,6 +122,7 @@
   font-weight: 500;
   transition: all 0.3s ease;
   margin-top: auto;
+  flex-shrink: 0;
 }
 
 .logout:hover {
@@ -126,34 +131,184 @@
 }
 
 /* Scrollbar personnalisée pour la sidebar */
-.client-informations::-webkit-scrollbar {
+.info::-webkit-scrollbar {
   width: 6px;
 }
 
-.client-informations::-webkit-scrollbar-track {
+.info::-webkit-scrollbar-track {
   background: #1c1c1e;
 }
 
-.client-informations::-webkit-scrollbar-thumb {
+.info::-webkit-scrollbar-thumb {
   background: #333;
   border-radius: 3px;
 }
 
-.client-informations::-webkit-scrollbar-thumb:hover {
+.info::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
 
 .main-section {
   flex: 1;
-  padding: 40px 60px;
   display: flex;
   flex-direction: column;
   gap: 30px;
-  overflow-y: auto;
 }
 
 .main-section h1 {
   font-size: 2rem;
   color: #8a2be2;
   margin-bottom: 20px;
+}
+
+/* ===== RESPONSIVE ===== */
+
+/* Tablette */
+@media (max-width: 1024px) {
+  .client-informations {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .left-side-bar {
+    position: relative;
+    top: 0;
+    order: 2;
+    max-height: none;
+  }
+
+  .user-picture {
+    width: 100px;
+    height: 100px;
+  }
+
+  .info {
+    padding: 15px 20px;
+  }
+
+  .info a {
+    font-size: 0.9rem;
+    padding: 6px 10px;
+  }
+
+  .main-section {
+    gap: 25px;
+  }
+
+  .main-section h1 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Tablette et mobile - Menu latéral caché */
+@media (max-width: 768px) {
+  .client-informations {
+    padding: 15px;
+    gap: 20px;
+  }
+
+  .left-side-bar {
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: auto;
+  }
+
+  .user-picture-name {
+    flex-direction: row;
+    padding: 15px 20px;
+    gap: 15px;
+  }
+
+  .user-picture {
+    width: 80px;
+    height: 80px;
+  }
+
+  .username {
+    font-size: 1rem;
+    text-align: left;
+  }
+
+  .info {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 15px 20px;
+    gap: 8px;
+    overflow: visible;
+  }
+
+  .info hr {
+    display: none;
+  }
+
+  .info a {
+    font-size: 0.85rem;
+    padding: 8px 12px;
+  }
+
+  .info a:hover,
+  .info a.active {
+    padding-left: 12px;
+  }
+
+  .info a::before {
+    display: none;
+  }
+
+  .logout {
+    height: 50px;
+    padding-left: 20px;
+    justify-content: center;
+  }
+
+  .main-section {
+    gap: 20px;
+  }
+
+  .main-section h1 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+}
+
+/* Mobile compact */
+@media (max-width: 480px) {
+  .user-picture-name {
+    padding: 10px 15px;
+    gap: 10px;
+  }
+
+  .user-picture {
+    width: 60px;
+    height: 60px;
+  }
+
+  .username {
+    font-size: 0.9rem;
+  }
+
+  .info {
+    padding: 10px 15px;
+    gap: 6px;
+  }
+
+  .info a {
+    font-size: 0.8rem;
+    padding: 6px 10px;
+  }
+
+  .logout {
+    height: 45px;
+    padding-left: 15px;
+    font-size: 0.9rem;
+  }
+
+  .main-section {
+    gap: 15px;
+  }
+
+  .main-section h1 {
+    font-size: 1.3rem;
+  }
 }

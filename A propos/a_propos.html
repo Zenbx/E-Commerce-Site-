@@ -31,7 +31,7 @@
 
       <div class="buttons">
         <button class="connexion-button">Se Connecter</button>
-        <button class="pay-button">Acheter</button>
+      <button class="pay-button" onclick="window.location.href='../Catalogue/catalogue.html'">Acheter</button>
       </div>
     </header>
 
@@ -51,74 +51,80 @@
       </div>
       <section class="scroll-section">
       <div class="developpers">
-        <div class="dev"><img src="images/a_propos/Nathan.jpeg" alt="" class="img1">
+        <div class="dev"><img src="../Images/a_propos/Nathan.jpeg" alt="" class="img1">
             <div>
               <p>Nathan Nzieleu</p>
               <p>...</p>
             </div></div>
-        <div class="dev"><img src="images/img2.jpeg" alt="" class="img2">
+        <div class="dev"><img src="../Images/a_propos/bil.jpeg" alt="" class="img2">
           <div>
             <p>Bill Demanou</p>
             <p>...</p>
           </div>
         </div>
-        <div class="dev"> <img src="images/img3.jpeg" alt="" class="img3">
+        <div class="dev"> <img src="../Images/a_propos/bisseck.jpeg" alt="" class="img3">
           <div>
             <p>Chalvi Bisseck</p>
             <p>...</p>
           </div>
         </div>
-        <div class="dev"><img src="images/img4.jpeg" alt="" class="img4">
+        <div class="dev"><img src="../Images/a_propos/raissa.jpeg" alt="" class="img4">
           <div>
             <p>Raissa Wokmeni</p>
             <p>...</p>
           </div>
         </div>
-        <div class="dev"><img src="images/img5.jpeg" alt="" class="img5">
+        <div class="dev"><img src="../Images/a_propos/zuch.jpeg" alt="" class="img5">
           <div>
             <p>Nathanael Zuchuon</p>
             <p>...</p>
           </div>
         </div>
-        <div class="dev"><img src="images/img5.jpeg" alt="" class="img5">
+        <div class="dev"><img src="../Images/a_propos/tomson.jpeg" alt="" class="img5">
           <div>
             <p>Thomas Tagne</p>
             <p>...</p>
           </div>
         </div>
-        <div class="dev"><img src="images/img5.jpeg" alt="" class="img5">
+        <div class="dev"><img src="../Images/a_propos/fofack.jpeg" alt="" class="img5">
           <div>
             <p>Henri Fofack</p>
             <p>...</p>
           </div>
         </div>
-        <div class="dev"><img src="images/img5.jpeg" alt="" class="img5">
+        <div class="dev"><img src="../Images/a_propos/thomas.jpeg" alt="" class="img5">
           <div>
             <p>Thomas Eloundou</p>
             <p>...</p>
           </div>
         </div>
-        <div class="dev"><img src="images/img5.jpeg" alt="" class="img5">
+        <div class="dev"><img src="../Images/a_propos/angela.jpeg" alt="" class="img5">
           <div>
             <p>Angela Tomo</p>
             <p>...</p>
           </div>
         </div>
-        <div class="dev"><img src="images/img5.jpeg" alt="" class="img5">
+        <div class="dev"><img src="../Images/a_propos/odile.jpeg" alt="" class="img5">
           <div>
             <p>Odile Ayissi</p>
             <p>...</p>
           </div>
         </div>
-        <div class="dev"><img src="images/img5.jpeg" alt="" class="img5">
+        <div class="dev"><img src="../Images/a_propos/isa.jpeg" alt="" class="img5">
           <div>
             <p>Isabelle Magne</p>
             <p>...</p>
           </div>
         </div>
-        <div class="dev"><img src="images/img5.jpeg" alt="" class="img5">
+        <div class="dev"><img src="../Images/a_propos/ivanna.jpeg" alt="" class="img5">
           <div>
             <p>Ivana Waton</p>
+            <p>...</p>
+          </div>
+        </div>
+          <div class="dev"><img src="../Images/a_propos/jeff.jpeg" alt="" class="img5">
+          <div>
+            <p>Jeff Belekotan</p>
             <p>...</p>
           </div>
         </div>
@@ -128,38 +134,67 @@
 
    <!-- FOOTER -->
 <footer class="footer">
-<div class = "footer-top">
-  <div class="footer-left">
-    <h2 class="footer-logo">TechStorm</h2>
-    <p class="footer-slogan">Le futur entre vos mains</p>
+
+  <!-- TOP CONTENT -->
+  <div class="footer-top">
+
+    <!-- COLONNE GAUCHE -->
+    <div class="footer-left">
+      <h2>TechStorm</h2>
+      <p class="footer-slogan">Votre marketplace moderne, rapide et sécurisée.</p>
+
+    
+
+      <div class="footer-socials" style="margin-top: 25px;">
+        <a href="#"><img src="../icones/facebook.svg" alt="facebook"></a>
+        <a href="#"><img src="../icones/instagram.svg" alt="instagram"></a>
+        <a href="#"><img src="../icones/linkedin.svg" alt="linkedin"></a>
+      </div>
+    </div>
+
+    <!-- COLONNE MILIEU 1 -->
+       <div class="footer-links">
+        <h3 style="margin-bottom: 10px; color:#fff;">A propos</h3>
+        <a href="../A propos/a_propos.html"> Qui sommes-nous?</a>
+        <a href="../A propos/a_propos.html"> Notre équipe</a>
+      </div>
+
+    <div class="footer-links">
+      <h3 style="margin-bottom: 10px; color:#fff;">Informations</h3>
+      <a href="../mentionslegales/mentionslegales/mentions-legales.html">Conditions générales</a>
+      <a href="../mentionslegales/mentionslegales/mentions-legales.html">Politique de Confidentialité</a>
+    </div>
+
+    <!-- COLONNE MILIEU 2 -->
+    <div class="footer-links">
+      <h3 style="margin-bottom: 10px; color:#fff;">Contact</h3>
+      <a href="../Contact/page.html">FAQ</a>
+      <a href="../Contact/page.html">Service client</a>
+    </div>
+
+    <!-- NEWSLETTER -->
+    <div class="footer-newsletter">
+      <p class="newsletter-text">Restez informés de nos nouveautés</p>
+
+      <form class="newsletter-form">
+        <input type="email" class="newsletter-input" placeholder="Votre email">
+        <button class="newsletter-button">S'inscrire</button>
+      </form>
+
+      <p style="margin-top: 10px; font-size: 0.8rem; color:#aaa;">
+        En vous inscrivant, vous acceptez notre politique de confidentialité.
+      </p>
+    </div>
+
   </div>
 
-  <div class="footer-links-socials">
-    <div class="footer-links">
-      <a href="#">Accueil</a>
-      <a href="#">À propos</a>
-      <a href="#">Catalogue</a>
-      <a href="#">Contact</a>
-    </div>
-    <div class="footer-socials">
-      <a href="#"><img src="../icones/facebook.svg" alt="Facebook" /></a>
-      <a href="#"><img src="../icones/instagram.svg" alt="Instagram" /></a>
-      <a href="#"><img src="../icones/linkedin.svg" alt="LinkedIn" /></a>
-    </div>
-  </div>
-  
-  <div class="footer-newsletter">
-    <p class="newsletter-text">Abonnez-vous à notre newsletter</p>
-    <div class="newsletter-form">
-      <input type="email" placeholder="Votre email" class="newsletter-input" />
-      <button class="newsletter-button">S’abonner</button>
-    </div>
-  </div>
-</div>
+  <!-- BOTTOM -->
   <div class="footer-bottom">
-    <p>© 2025 TechStorm – Tous droits réservés.</p>
+    © 2025 NeoMarket – Tous droits réservés.
   </div>
+
 </footer>
+
  <script>
   const toggleBtn = document.querySelector(".menu-toggle");
   const nav = document.querySelector("header nav");

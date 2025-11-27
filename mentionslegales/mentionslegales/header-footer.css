@@ -328,9 +328,9 @@ body {
   }
 
   /* Cache les boutons à droite dans l’en-tête (se connecter / acheter) */
-  /*.button {
-    padding: 5px;
-  }*/
+  .buttons {
+    display: none;
+  }
 
   /* Le header devient compact */
   .header {

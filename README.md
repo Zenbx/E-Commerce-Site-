@@ -25,6 +25,8 @@ Il contient des pages pour l’accueil, le catalogue, l’authentification, le p
 - JavaScript  
 
 *(Ajoutez d’autres technologies ici si nécessaire : PHP, Node.js, React, etc.)*
+## Prototype de l'IHM
+Lien vers le Figma : https://www.figma.com/design/kZnZwRwXWNxItdVz9PzzBO/E-commerce-ProgWeb?node-id=164-32&t=WWI58uKt6vZrAsaT-1
 
 ## 📂 Structure du projet
 
